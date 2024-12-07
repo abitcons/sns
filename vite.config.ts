@@ -1,0 +1,22 @@
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  resolve: {
+    alias: {
+      '@components': path.resolve(__dirname, 'src/components'),
+      '@data': path.resolve(__dirname, 'src/components/data'),
+      '@pages': path.resolve(__dirname, 'src/pages'),
+      '@styles': path.resolve(__dirname, 'src/styles'),
+    },
+  },
+  optimizeDeps: {
+    exclude: ['lucide-react'], // Excludes unnecessary dependency optimizations for lucide-react
+  },
+  server: {
+    port: 3000, // Change this to your desired port (e.g., 3000)
+  },
+});
