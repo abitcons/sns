@@ -1,0 +1,70 @@
+{
+  "header": {
+    "navigation": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "solutions": "Solutions",
+      "careers": "Careers",
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+    "services_submenu": {
+      "digital_transformation": "Digital Transformation Consulting",
+      "sap_implementation": "SAP Implementation",
+      "ai_data_analytics": "AI & Data Analytics",
+      "cloud_computing": "Cloud Computing Services",
+      "software_development": "Custom Software Development",
+      "data_management": "Enterprise Data Management"
+    },
+    "solutions_submenu": {
+      "erp_solutions": "ERP Solutions",
+      "hr_solutions": "HR Solutions",
+      "customer_experience": "Customer Experience",
+      "procurement": "Procurement",
+      "snam_solutions": "SNAM Solutions"
+    }
+  },
+  "footer": {
+    "tagline": "Revolutionizing Businesses with AI and SAP Innovation",
+    "description": "Providing cutting-edge solutions for business transformation and operational excellence.",
+    "quick_links": {
+      "title": "Quick Links",
+      "about": "About Us",
+      "services": "Services",
+      "customer_success": "Customer Success",
+      "solutions": "Solutions",
+      "careers": "Careers"
+    },
+    "contact": {
+      "title": "Get in Touch for Smart Solutions Today!",
+      "address": "King Fahd Road, Al Nakheel Tower, Riyadh",
+      "phone": "+966-11-225-5437",
+      "email": "info@nationalsol.com"
+    },
+   
+    "updates": {
+      "title": "Stay Updated with the Latest Insights",
+      "news_button": "Explore News",
+      "blog_button": "Read Blogs"
+    
+  
+    },
+    "social": {
+      "title": "Connect With Us",
+      "platforms": {
+        "facebook": "Facebook",
+        "instagram": "Instagram",
+        "youtube": "YouTube",
+        "twitter": "X (Twitter)",
+        "linkedin": "LinkedIn",
+        "threads": "Threads"
+      }
+    },
+    "legal": {
+      "rights": "Smart National Solutions. All rights reserved.",
+      "privacy": "Privacy Policy",
+      "terms": "Terms & Conditions"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+    "clientcarousel": {
+      "title": "Who We Work With",
+      "description": "Our trusted clients thrive with our ERP solutions.",
+      "clients": [
+        { "name": "Alakaria" },
+        { "name": "Awqaf" },
+        { "name": "Bayan" },
+        { "name": "EEC" },
+        { "name": "ELM" },
+        { "name": "Fransi Saudi Bank" },
+        { "name": "G20 Saudi" },
+        { "name": "GAMI" },
+        { "name": "GASCO" },
+        { "name": "Najm" },
+        { "name": "NUPCO" },
+        { "name": "SITCO" },
+        { "name": "TETCO" },
+        { "name": "Seven" },
+        { "name": "Riyadh Airports" },
+        { "name": "Baladna" },
+        { "name": "DC" },
+        { "name": "DGA" },
+        { "name": "Esport" },
+        { "name": "GAC" },
+        { "name": "HRC" },
+        { "name": "JCD" },
+        { "name": "KFCA" },
+        { "name": "MAWANI" },
+        { "name": "MOI" },
+        { "name": "NEO" },
+        { "name": "Qiddiya" },
+        { "name": "Rotana" },
+        { "name": "SIDF" },
+        { "name": "SITE" },
+        { "name": "Tabadul" },
+        { "name": "TTech" }
+      ],
+      "buttons": {
+        "scroll_left": "Scroll Left",
+        "scroll_right": "Scroll Right"
+      }
+    }
+  }
+  

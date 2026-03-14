@@ -1,0 +1,58 @@
+{
+    "smartCities": {
+      "title": "Building Tomorrow's Smart Cities Today",
+      "subtitle": "Pioneering Urban Digital Innovation",
+      "description": "Lead the digital transformation of cities with our cutting-edge smart city solutions. From urban innovation to advanced infrastructure, we align technology with sustainability for a brighter tomorrow.",
+      "features": [
+        "Urban Innovation",
+        "Digital Infrastructure", 
+        "Smart Services"
+      ]
+    },
+    "sap": {
+      "title": "Enterprise-Grade SAP Solutions for Saudi Vision 2030",
+      "subtitle": "Powering Digital Transformation Across the Kingdom",
+      "description": "Revolutionize your business with our SAP solutions, tailored for the Middle East. From implementation to seamless integration, we ensure enhanced efficiency, compliance, and business transformation aligned with Saudi Vision 2030.",
+      "features": [
+        "SAP Implementation",
+        "System Integration",
+        "Business Transformation"
+      ]
+    },
+    "snam": {
+      "title": "Streamline HR Operations with SNAM Solutions",
+      "subtitle": "Complete HR & Travel Management Excellence",
+      "description": "Empower your HR operations with SNAM's suite: SNAM Travel, SNAM Muqeem, SNAM Yaqeen, and SNAM AI. Fully integrated with SAP SuccessFactors, these solutions streamline HR management, improve compliance, and optimize workforce productivity.",
+      "features": [
+        "SNAM Travel",
+        "SNAM Muqeem",
+        "SNAM Yaqeen",
+        "SNAM AI"
+      ]
+    },
+    "alphaiota": {
+      "title": "Revolutionizing Healthcare with Alphaiota AI Solutions",
+      "subtitle": "Advanced AI for Superior Patient Care",
+      "description": "Discover the future of healthcare with Alphaiota. AI is revolutionizing patient care, diagnostics, and medical research worldwide. AlphaIota's AI-driven solutions enable faster, more accurate diagnoses and personalized treatments.",
+      "features": [
+        "AI Diagnostics",
+        "Personalized Medicine",
+        "Clinical Excellence"
+      ]
+    },
+    "thinkAi": {
+      "title": "Unlock Business Intelligence with ThinkAi",
+      "subtitle": "AI-Powered Business Excellence",
+      "description": "Unleash the full potential of your business data with ThinkAI. Our platform enhances productivity, streamlines workflows, and fosters collaboration. With AI-powered tools, transform the way you work and unlock insights that drive growth.",
+      "features": [
+        "AI Solutions",
+        "Innovation",
+        "Digital Transformation"
+      ]
+    },
+    "common": {
+      "learnMore": "Learn More",
+      "loading": "Loading...",
+      "error": "Something went wrong"
+    }
+  }

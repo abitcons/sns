@@ -1,4 +1,4 @@
-import React from 'react';
+
 import FooterLogos from './FooterLogos';
 
 export default function FooterAbout() {

@@ -1,7 +1,8 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail } from 'lucide-react';
+import React from 'react';
 
 interface FooterLink {
   label: string;

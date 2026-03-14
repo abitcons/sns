@@ -1,7 +1,47 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2023", "DOM"], /* Ensures DOM support for JSX */
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* JSX Support */
+    "jsx": "react-jsx", /* Enables JSX compilation */
+    "jsxImportSource": "react", /* Required for React 17+ */
+
+    /* Module Resolution */
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "composite": true,
+
+    /* Output Control */
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationDir": "./dist/types",
+    "sourceMap": true,
+    "removeComments": true,
+
+    /* Type Checking */
+    "strict": true,
+    "noUnusedLocals": false, /* Allowing unused locals for debugging */
+    "noUnusedParameters": false, /* Allowing unused parameters */
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+
+    /* Additional Fixes */
+    "resolveJsonModule": true,
+    "allowJs": true, /* Ensures JS files are compiled */
+    "checkJs": false, /* Avoids TypeScript checking JS files */
+    
+    /* Ensure Emit */
+    "noEmit": false
+  },
+  "include": [
+    "vite.config.ts",
+    "src/**/*"
+  ],
+  "exclude": ["node_modules", "dist"]
 }

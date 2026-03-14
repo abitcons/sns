@@ -1,0 +1,37 @@
+{
+    "title": "Strategic Technology Partners",
+    "description": "Empowering digital transformation through strategic alliances with industry leaders.",
+    "partners": [
+      {
+        "id": 1,
+        "name": "SAP",
+        "description": "Global Leader in Enterprise Software Solutions",
+        "category": "Enterprise Solutions"
+      },
+      {
+        "id": 2,
+        "name": "Elm",
+        "description": "Leading Digital Solutions Provider in Saudi Arabia",
+        "category": "Digital Transformation"
+      },
+      {
+        "id": 3,
+        "name": "Alphaiota",
+        "description": "Innovative Technology Solutions Provider",
+        "category": "Technology Innovation"
+      },
+      {
+        "id": 4,
+        "name": "Tallymarks",
+        "description": "Specialized IT Services & Solutions",
+        "category": "IT Services"
+      },
+      {
+        "id": 5,
+        "name": "Data Plus",
+        "description": "Advanced Data Analytics & Solutions",
+        "category": "Data Analytics"
+      }
+    ]
+  }
+  

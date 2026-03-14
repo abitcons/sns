@@ -1,0 +1,35 @@
+{
+    "smartcities": {
+      "title": "Leading Smart Cities Innovation in KSA",
+      "description": "Pioneering the future of urban development in Saudi Arabia and the Middle East through cutting-edge AI solutions and sustainable smart city technologies.",
+      "features": [
+        {
+          "title": "Intelligent Infrastructure",
+          "description": "Advanced urban planning and smart infrastructure management aligned with Saudi Vision 2030."
+        },
+        {
+          "title": "AI-Driven Operations",
+          "description": "Smart governance and city operations powered by advanced artificial intelligence systems."
+        },
+        {
+          "title": "Sustainable Development",
+          "description": "Eco-friendly solutions promoting sustainable urban growth and resource management."
+        },
+        {
+          "title": "Smart Security",
+          "description": "Advanced security systems ensuring safe and efficient urban environments."
+        }
+      ],
+      "cta": {
+        "title": "Explore Smart City Solutions",
+        "button": "Discover Now"
+      },
+      "video": {
+        "title": "Smart Cities of Tomorrow",
+        "description": "Experience the future of urban development in KSA",
+        "play": "Play",
+        "pause": "Pause"
+      }
+    }
+  }
+  

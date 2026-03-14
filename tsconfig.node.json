@@ -1,22 +1,22 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "lib": ["ES2023"],
-    "module": "ESNext",
-    "skipLibCheck": true,
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "isolatedModules": true,
-    "moduleDetection": "force",
-    "noEmit": true,
-
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "jsx": "react-jsx",               // Ensures JSX is compiled properly
+    "allowJs": true,                   // Allows JavaScript files
+    "skipLibCheck": true,               // Skips checking library files
+    "esModuleInterop": true,            // Ensures compatibility with ES Modules
+    "strict": true,                     // Enables strict mode
+    "moduleResolution": "node",         // Uses Node.js module resolution
+    "resolveJsonModule": true,          // Allows importing JSON files
+    "isolatedModules": true,            // Required for Next.js or modern frameworks
+    "noEmit": true,                     // Prevents TypeScript from outputting `.js` files
+    "module": "ESNext",                 // Supports modern ECMAScript modules
+    "target": "ES6",                    // Target ECMAScript 6+
+    "baseUrl": "./src",                 // Ensures absolute imports work
+    "paths": {
+      "@components/*": ["components/*"],
+      "@pages/*": ["pages/*"]
+    }
   },
-  "include": ["vite.config.ts"]
+  "include": ["src/**/*"],              // Ensures TypeScript scans all `.tsx` files
+  "exclude": ["node_modules", "dist"]   // Avoids unnecessary compilation
 }

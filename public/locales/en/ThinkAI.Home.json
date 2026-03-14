@@ -1,0 +1,35 @@
+{
+    "thinkai": {
+      "title": "Transform Your Business with ThinkAI",
+      "description": "Unleash your business data's true potential. We don't sell products; we sell results and solutions.",
+      "features": [
+        {
+          "title": "Data Security and Trust",
+          "description": "Ironclad protection for your sensitive business information with robust security at its core."
+        },
+        {
+          "title": "AI, Tailored to You",
+          "description": "Customized AI solutions that fit your industry and specific business needs."
+        },
+        {
+          "title": "Real-time Insights",
+          "description": "Advanced analytics and intuitive dashboards giving you the edge when it matters most."
+        },
+        {
+          "title": "Scalable Infrastructure",
+          "description": "Built for growth, supporting your evolving data needs with flexible solutions."
+        }
+      ],
+      "cta": {
+        "title": "Explore ThinkAI Platform",
+        "button": "Discover Now"
+      },
+      "video": {
+        "title": "ThinkAI Innovation",
+        "description": "Transforming businesses through AI solutions",
+        "play": "Play",
+        "pause": "Pause"
+      }
+    }
+  }
+  

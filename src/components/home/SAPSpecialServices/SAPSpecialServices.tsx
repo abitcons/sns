@@ -1,93 +1,109 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../../../styles/animations";
+import { useTranslation } from 'react-i18next';
 
-const sapServices = [
-  {
-    title: "SAP Implementation",
-    description: "Tailored implementation of SAP systems to meet business needs and ensure operational success.",
-    icon: "/SAP Services Icons/implementation-icon.gif",
-  },
-  {
-    title: "SAP Training",
-    description: "Empowering your team with expert SAP training to enhance productivity and operational efficiency.",
-    icon: "/SAP Services Icons/training-icon.gif",
-  },
-  {
-    title: "Project Management",
-    description: "Streamlined management for SAP projects to deliver on time and within budget.",
-    icon: "/SAP Services Icons/project-management-icon.gif",
-  },
-  {
-    title: "Data Services",
-    description: "Comprehensive data migration and management services to maximize SAP potential.",
-    icon: "/SAP Services Icons/data-services-icon.gif",
-  },
-  {
-    title: "SAP Support",
-    description: "Ongoing support to ensure smooth operation and minimal downtime of SAP systems.",
-    icon: "/SAP Services Icons/support-icon.gif",
-  },
-  {
-    title: "Add-On Development",
-    description: "Custom add-ons tailored to your business processes to extend the functionality of SAP systems.",
-    icon: "/SAP Services Icons/addon-development-icon.gif",
-  },
+const sapServiceKeys = [
+  "sap_services.services.0",
+  "sap_services.services.1",
+  "sap_services.services.2",
+  "sap_services.services.3",
+  "sap_services.services.4",
+  "sap_services.services.5"
 ];
 
 export default function SAPSpecialServices() {
+  const { t } = useTranslation('Home');
+
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 bg-gradient-to-b from-white to-gray-50">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header Section */}
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-100px" }}
           variants={staggerContainer}
-          className="text-center mb-12"
+          className="text-center mb-20 relative"
         >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="absolute -top-8 left-1/2 -translate-x-1/2 text-8xl text-gray-100 font-bold -z-10"
+          >
+            SAP®
+          </motion.div>
+
           <motion.h2
             variants={fadeIn}
-            className="text-4xl font-bold"
-            style={{ color: "#36a0d0" }}
+            className="text-4xl lg:text-5xl font-bold text-[#36a0d0] mb-6"
           >
-            SAP Special Services
+            {t('sap_services.title')}
           </motion.h2>
-          <div className="h-4"></div> {/* Added space between headline and subheadline */}
+
           <motion.p
             variants={fadeIn}
-            className="text-lg text-gray-600"
+            className="text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
           >
-            As certified SAP partners, we offer a range of services tailored to meet the diverse needs of businesses, ensuring seamless operations and exceptional performance.
+            {t('sap_services.description')}
           </motion.p>
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-          {sapServices.map((service, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {sapServiceKeys.map((key, index) => (
             <motion.div
               key={index}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeIn}
-              whileHover={{ scale: 1.05 }}
-              className="relative bg-gray-100 p-8 rounded-lg shadow-lg text-center transition-transform duration-300"
+              viewport={{ once: true, margin: "-50px" }}
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 0.5, delay: index * 0.1 },
+                },
+              }}
+              className="group h-full"
             >
-              {/* Icon Section */}
-              <div className="flex items-center justify-center h-28 w-28 mx-auto mb-6 bg-white rounded-full shadow-lg p-6">
-                <img
-                  src={service.icon}
-                  alt={service.title}
-                  className="h-20 w-20 object-contain"
-                  style={{
-                    animation: "spin 5s linear infinite", // Ensures the GIF animation remains smooth
-                  }}
+              <div
+                className="h-full flex flex-col bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 
+                          border border-gray-100 hover:border-[#36a0d0]/20 relative overflow-hidden"
+              >
+                {/* Background Hover Effect */}
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-5 transition-opacity duration-500 -z-10"
+                  style={{ backgroundColor: t(`${key}.hoverColor`) }}
+                />
+
+                {/* Icon Container */}
+                <div className="mb-6 flex justify-center">
+                  <div className="relative flex items-center justify-center h-24 w-24 bg-white rounded-full shadow-lg p-5 group-hover:scale-110 transition-transform duration-300">
+                    <img
+                      src={t(`${key}.icon`)}
+                      alt={t(`${key}.title`)}
+                      className="h-16 w-16 object-contain"
+                    />
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="flex-1 flex flex-col text-center">
+                  <h3 className="text-xl lg:text-2xl font-bold text-gray-800 mb-4 group-hover:text-[#36a0d0] transition-colors duration-300">
+                    {t(`${key}.title`)}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+                    {t(`${key}.description`)}
+                  </p>
+                </div>
+
+                {/* Hover Indicator */}
+                <div
+                  className="absolute bottom-0 left-0 right-0 h-1 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
+                  style={{ backgroundColor: t(`${key}.hoverColor`) }}
                 />
               </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2">{service.title}</h3>
-              <p className="text-gray-600">{service.description}</p>
             </motion.div>
           ))}
         </div>

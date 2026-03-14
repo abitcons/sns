@@ -1,0 +1,133 @@
+{
+  "about": {
+    "title": "About Smart National Solutions",
+    "description": "Based in Saudi Arabia, Smart National Solutions (SNS) specializes in digital transformation, delivering innovative SAP solutions and tailored applications to empower businesses across the Middle East.",
+    "imageAlt": "About Smart National Solutions",
+    "learnMore": "Learn more about us",
+    "values": {
+      "excellence": {
+        "title": "Excellence",
+        "description": "Delivering exceptional solutions"
+      },
+      "partnership": {
+        "title": "Partnership",
+        "description": "Building lasting client relationships"
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Driving business transformation"
+      }
+    },
+    "statistics": {
+      "projects": {
+        "label": "Successful Projects",
+        "description": "Digital transformations delivered"
+      },
+      "clients": {
+        "label": "Satisfied Clients",
+        "description": "Across Middle East"
+      },
+      "experience": {
+        "label": "Years Experience",
+        "description": "Industry expertise"
+      }
+    }
+  },
+  "why_choose_sns": {
+    "section_title": "Why Choose SNS?",
+    "description": "Partner with Saudi Arabia's leading digital transformation experts. SNS combines tailored solutions, proven expertise, and dedicated support to elevate your business.",
+    "features": [
+      {
+        "title": "Tailored Solutions",
+        "description": "Custom-fit solutions to meet your business needs.",
+        "src": "/Icons/Tailored-Solutions.gif"
+      },
+      {
+        "title": "Proven Expertise",
+        "description": "Decades of experience in digital transformation.",
+        "src": "/Icons/Proven-Expertise.gif"
+      },
+      {
+        "title": "Dedicated Support",
+        "description": "Round-the-clock assistance to ensure success.",
+        "src": "/Icons/Dedicated-Support.gif"
+      }
+    ]
+  },
+  "seo": {
+    "title": "Smart National Solutions ",
+    "description": "Smart National Solutions (SNS) empowers businesses across KSA and the Middle East with innovative SAP solutions, tailored apps, and digital transformation expertise.",
+    "keywords": "SAP solutions, digital transformation KSA, business solutions Middle East, tailored applications, SAP KSA, Smart National Solutions",
+    "ogTitle": "Smart National Solutions | Digital Transformation Experts in KSA",
+    "ogDescription": "Leading the digital transformation in Saudi Arabia and the Middle East, SNS delivers top-tier SAP solutions, business innovations, and personalized applications."
+  },
+  "core_services": {
+    "title": "Our Core Services",
+    "description": "Discover how our innovative solutions can empower your business through technology-driven success.",
+    "services": {
+      "sap_solutions": {
+        "title": "SAP® Solutions",
+        "description": "Empowering your business with tailored SAP® systems to drive growth and efficiency."
+      },
+      "custom_development": {
+        "title": "Custom Development",
+        "description": "Building innovative custom applications to meet your unique business needs."
+      },
+      "data_management": {
+        "title": "Data Management",
+        "description": "Transforming data into actionable insights with advanced analytics and storage solutions."
+      },
+      "it_consulting": {
+        "title": "IT Consulting",
+        "description": "Expert advisory services to streamline operations and maximize your IT investments."
+      }
+    }
+  },
+  "sap_services": {
+    "title": "SAP® Services",
+    "description": "As certified SAP® partners, we offer a range of services tailored to meet the diverse needs of businesses, ensuring seamless operations and exceptional performance.",
+    "services": [
+      {
+        "title": "SAP® Implementation",
+        "description": "Tailored implementation of SAP® systems to meet business needs and ensure operational success.",
+        "icon": "/SAP Services Icons/implementation-icon.gif",
+        "hoverColor": "#36a0d0"
+      },
+      {
+        "title": "SAP® Training",
+        "description": "Empowering your team with expert SAP® training to enhance productivity and operational efficiency.",
+        "icon": "/SAP Services Icons/training-icon.gif",
+        "hoverColor": "#5bb6bb"
+      },
+      {
+        "title": "Project Management",
+        "description": "Streamlined management for SAP® projects to deliver on time and within budget.",
+        "icon": "/SAP Services Icons/project-management-icon.gif",
+        "hoverColor": "#6ec6ab"
+      },
+      {
+        "title": "Data Services",
+        "description": "Comprehensive data migration and management services to maximize SAP® potential.",
+        "icon": "/SAP Services Icons/data-services-icon.gif",
+        "hoverColor": "#36a0d0"
+      },
+      {
+        "title": "SAP® Support",
+        "description": "Ongoing support to ensure smooth operation and minimal downtime of SAP® systems.",
+        "icon": "/SAP Services Icons/support-icon.gif",
+        "hoverColor": "#5bb6bb"
+      },
+      {
+        "title": "Add-On Development",
+        "description": "Custom add-ons tailored to your business processes to extend the functionality of SAP® systems.",
+        "icon": "/SAP Services Icons/addon-development-icon.gif",
+        "hoverColor": "#6ec6ab"
+      }
+    ]
+  },
+  "cta_services": {
+    "title": "Unlock the Full Potential of SAP® with Our Services",
+    "description": "From tailored SAP® solutions to expert advisory, discover how our services can transform your business and drive innovation. Let us help you achieve operational excellence today!",
+    "button": "Explore Our Services"
+  }
+}

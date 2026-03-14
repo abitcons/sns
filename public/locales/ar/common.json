@@ -1,0 +1,81 @@
+{
+    "header": {
+      "navigation": {
+        "home": "الرئيسية",
+        "about": "من نحن",
+        "services": "الخدمات",
+        "solutions": "الحلول",
+        "careers": "الوظائف",
+        "blog": "المدونة",
+        "contact": "اتصل بنا"
+      },
+      "services_submenu": {
+        "digital_transformation": "استشارات التحول الرقمي",
+        "sap_implementation": "تطبيق SAP",
+        "ai_data_analytics": "الذكاء الاصطناعي وتحليل البيانات",
+        "cloud_computing": "خدمات الحوسبة السحابية",
+        "software_development": "تطوير البرمجيات المخصصة",
+        "data_management": "إدارة البيانات المؤسسية"
+      },
+      "solutions_submenu": {
+        "erp_solutions": "حلول ERP",
+        "hr_solutions": "حلول الموارد البشرية",
+        "customer_experience": "تجربة العملاء",
+        "procurement": "المشتريات",
+        "snam_solutions": "حلول SNAM"
+      }
+    },
+   "footer": {
+    "logo": {
+      "alt": "شعار الحلول الوطنية الذكية"
+    },
+    "tagline": "تطوير الأعمال من خلال الذكاء الاصطناعي وابتكارات SAP",
+    "description": "نقدم حلولاً متطورة لتحول الأعمال والتميز التشغيلي",
+    "sap_gold_partner": {
+      "alt": "شعار شريك SAP الذهبي"
+    },
+    "sap_certified": {
+      "alt": "شعار SAP المعتمد"
+    },
+    "quick_links": {
+      "title": "روابط سريعة",
+      "about": "من نحن",
+      "services": "خدماتنا",
+      "customer_success": "نجاحات عملائنا",
+      "solutions": "حلولنا",
+      "careers": "الوظائف"
+    },
+    "contact": {
+      "title": "تواصل معنا للحصول على الحلول الذكية اليوم!",
+      "address": "طريق الملك فهد، برج النخيل، الرياض",
+      "phone": "٥٤٣٧-٢٢٥-١١- ٩٦٦+ ",
+      "email": "info@nationalsol.com"
+    },
+   
+    
+        "updates": {
+          "title": "ابق على اطلاع بأحدث الرؤى",
+          "news_button": "استكشف الأخبار",
+          "blog_button": "اقرأ المدونة"
+         
+    },
+    "social": {
+      "title": "تواصل معنا",
+      "platforms": {
+        "facebook": "فيسبوك",
+        "instagram": "انستغرام",
+        "youtube": "يوتيوب",
+        "twitter": "إكس (تويتر)",
+        "linkedin": "لينكد إن",
+        "threads": "ثريدز"
+      }
+    
+  },
+  "legal": {
+    "rights": "حلول الوطن الذكية . جميع الحقوق محفوظة",
+    "privacy": "سياسة الخصوصية",
+    "terms": "الشروط والأحكام"
+  }
+}
+
+  }

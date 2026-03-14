@@ -1,0 +1,35 @@
+{
+    "alphaiota": {
+      "title": "Revolutionizing Healthcare with Alphaiota AI Solutions",
+      "description": "Revolutionizing healthcare through artificial intelligence, delivering smarter diagnostics and enhanced patient care.",
+      "features": [
+        {
+          "title": "AI-Powered Diagnostics",
+          "description": "Advanced diagnostic tools leveraging artificial intelligence for accurate and rapid results"
+        },
+        {
+          "title": "Smart Analysis",
+          "description": "Intelligent analysis of medical data for better clinical decision-making"
+        },
+        {
+          "title": "Patient-Centric Care",
+          "description": "Personalized healthcare solutions adapted to individual patient needs"
+        },
+        {
+          "title": "Innovation Focus",
+          "description": "Continuous advancement in medical technology and healthcare solutions"
+        }
+      ],
+      "cta": {
+        "title": "Discover AlphaIota Solutions",
+        "button": "Explore Now"
+      },
+      "video": {
+        "title": "AlphaIota Healthcare",
+        "description": "Next-generation AI-powered healthcare solutions",
+        "play": "Play",
+        "pause": "Pause"
+      }
+    }
+  }
+  

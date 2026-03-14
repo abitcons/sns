@@ -1,52 +1,85 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { fadeIn, staggerContainer } from '../../styles/animations';
-import AnimatedCounter from '../shared/AnimatedCounter';
+import { TrendingUp, Users as Team, Clock } from 'lucide-react';
+import CountUp from 'react-countup';
+import { useTranslation } from 'react-i18next';
 
 interface Statistic {
   value: number;
   suffix?: string;
-  label: string;
+  translationKey: string;
+  icon: React.ElementType;
 }
 
-const statistics: Statistic[] = [
-  { value: 35, suffix: '+', label: 'Successful Projects' },
-  { value: 100, suffix: '+', label: 'Satisfied Clients' },
-  { value: 15, suffix: '+', label: 'Years Experience' },
-];
+const StatisticsSection = () => {
+  const { t, i18n } = useTranslation('Home');
+  const isRtl = i18n.dir() === 'rtl';
 
-export default function StatisticsSection() {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
+  const statistics: Statistic[] = [
+    { 
+      value: 35, 
+      suffix: '+', 
+      translationKey: 'projects',
+      icon: TrendingUp
+    },
+    { 
+      value: 100, 
+      suffix: '+', 
+      translationKey: 'clients',
+      icon: Team
+    },
+    { 
+      value: 15, 
+      suffix: '+', 
+      translationKey: 'experience',
+      icon: Clock
+    }
+  ];
 
   return (
-    <section ref={ref} className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <motion.div
+      initial={{ y: 20, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+      className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8"
+    >
+      {statistics.map((stat, index) => (
         <motion.div
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          variants={staggerContainer}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          key={index}
+          whileHover={{ y: -5 }}
+          className="flex flex-col p-6 bg-white rounded-xl shadow-lg border border-gray-100 h-full"
         >
-          {statistics.map((stat, index) => (
-            <motion.div
-              key={index}
-              variants={fadeIn}
-              whileHover={{ scale: 1.05 }}
-              className="text-center p-6 bg-white rounded-lg shadow-lg transition-shadow hover:shadow-xl"
-            >
-              <AnimatedCounter
-                end={stat.value}
-                suffix={stat.suffix}
-              />
-              <div className="text-gray-600 mt-2">{stat.label}</div>
-            </motion.div>
-          ))}
+          {/* Numbers on top */}
+          <div className="text-2xl font-bold bg-gradient-to-r from-[#36a0d0] to-[#5bb6bb] bg-clip-text text-transparent flex mb-3">
+            <CountUp
+              end={stat.value}
+              duration={2}
+              enableScrollSpy
+              scrollSpyOnce
+            />
+            <span className={isRtl ? 'mr-1' : 'ml-1'}>{stat.suffix}</span>
+          </div>
+
+          {/* Text and Icon row */}
+          <div className={`flex items-start gap-4 ${isRtl ? 'flex-row-reverse' : 'flex-row'}`}>
+            <div className="p-3 rounded-lg bg-gradient-to-r from-[#36a0d0] to-[#5bb6bb] shrink-0">
+              <stat.icon className="h-6 w-6 text-white" />
+            </div>
+
+            <div className="flex-grow">
+              <p className="text-gray-600 font-medium">
+                {t(`about.statistics.${stat.translationKey}.label`)}
+              </p>
+              <p className="text-sm text-gray-500">
+                {t(`about.statistics.${stat.translationKey}.description`)}
+              </p>
+            </div>
+          </div>
         </motion.div>
-      </div>
-    </section>
+      ))}
+    </motion.div>
   );
-}
+};
+
+export default StatisticsSection;

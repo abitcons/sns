@@ -1,41 +1,38 @@
-import { Plane, Users, CheckCircle } from 'lucide-react';
-import type { Solution } from '../types';
-
-export const solutions: Solution[] = [
+export const solutions = [
   {
     title: 'SNAM Travel',
     description: 'Streamline corporate travel management with seamless SAP integration.',
-    icon: Plane,
+    logo: '/SNAM-Logos/SNAM-travel.svg', // Updated to use logo
     features: [
       'Automated travel request and approval workflow',
       'Integration with SAP systems',
       'Real-time expense tracking',
-      'Comprehensive reporting dashboard'
+      'Comprehensive reporting dashboard',
     ],
-    href: '/solutions/snam-travel'
+    link: '/solutions/snam-travel', // Updated path
   },
   {
     title: 'SNAM Muqeem',
     description: 'Efficient residency permit management system for your workforce.',
-    icon: Users,
+    logo: '/SNAM-Logos/SNAM-muqeem.svg', // Updated to use logo
     features: [
       'Automated permit renewal notifications',
       'Document management system',
       'Compliance monitoring',
-      'Integration with government systems'
+      'Integration with government systems',
     ],
-    href: '/solutions/snam-muqeem'
+    link: '/solutions/snam-muqeem', // Updated path
   },
   {
     title: 'SNAM Yaqeen',
     description: 'Real-time employee verification and data management solution.',
-    icon: CheckCircle,
+    logo: '/SNAM-Logos/SNAM-yaqeen.svg', // Updated to use logo
     features: [
       'Instant employee verification',
       'Secure data management',
       'Integration with HR systems',
-      'Automated compliance checks'
+      'Automated compliance checks',
     ],
-    href: '/solutions/snam-yaqeen'
-  }
+    link: '/solutions/snam-yaqeen', // Updated path
+  },
 ];

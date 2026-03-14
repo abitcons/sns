@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 import { Send } from 'lucide-react';
 import { fadeIn } from '../../styles/animations';

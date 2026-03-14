@@ -1,0 +1,11 @@
+import { Variants } from "framer-motion";
+export declare const fadeIn: Variants;
+export declare const staggerContainer: Variants;
+export declare const slideIn: Variants;
+export declare const slideUp: Variants;
+export declare const scaleIn: Variants;
+export declare const pageTransition: Variants;
+export declare const hoverEffect: Variants;
+export declare const rotateIn: Variants;
+export declare const fadeInScale: Variants;
+export declare const bounce: Variants;

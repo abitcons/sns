@@ -1,6 +1,6 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Facebook, Instagram, Youtube, Linkedin } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 // Custom X (Twitter) Icon Component
 function XIcon({ className }: { className?: string }) {
@@ -36,37 +36,37 @@ function ThreadsIcon({ className }: { className?: string }) {
 
 const socialLinks = [
   {
-    name: 'Facebook',
+    name: 'facebook',
     href: 'https://www.facebook.com/nationalsol1',
     icon: Facebook,
     hoverColor: 'hover:text-[#1877F2]'
   },
   {
-    name: 'Instagram',
+    name: 'instagram',
     href: 'https://www.instagram.com/nationalsol1/',
     icon: Instagram,
     hoverColor: 'hover:text-[#E4405F]'
   },
   {
-    name: 'YouTube',
+    name: 'youtube',
     href: 'https://www.youtube.com/@SmartNationalSolution',
     icon: Youtube,
     hoverColor: 'hover:text-[#FF0000]'
   },
   {
-    name: 'X (Twitter)',
+    name: 'x (twitter)',
     href: 'https://twitter.com/nationalsol1',
     icon: XIcon,
     hoverColor: 'hover:text-white'
   },
   {
-    name: 'LinkedIn',
+    name: 'linkedin',
     href: 'https://www.linkedin.com/company/nationalsol',
     icon: Linkedin,
     hoverColor: 'hover:text-[#0A66C2]'
   },
   {
-    name: 'Threads',
+    name: 'threads',
     href: 'https://www.threads.net/@nationalsol1',
     icon: ThreadsIcon,
     hoverColor: 'hover:text-white'
@@ -74,9 +74,13 @@ const socialLinks = [
 ];
 
 export default function FooterSocial() {
+  const { t } = useTranslation('common');
+  
   return (
     <div>
-      <h3 className="text-lg font-semibold text-white mb-6">Connect With Us</h3>
+      <h3 className="text-lg font-semibold text-white mb-6">
+        {t('footer.social.title')}
+      </h3>
       <div className="flex flex-wrap gap-4">
         {socialLinks.map((social) => (
           <motion.a
@@ -87,10 +91,12 @@ export default function FooterSocial() {
             className={`text-white/90 transition-colors ${social.hoverColor}`}
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.9 }}
-            title={social.name}
+            title={t(`footer.social.platforms.${social.name}`)}
           >
             <social.icon className="h-6 w-6" />
-            <span className="sr-only">{social.name}</span>
+            <span className="sr-only">
+              {t(`footer.social.platforms.${social.name}`)}
+            </span>
           </motion.a>
         ))}
       </div>

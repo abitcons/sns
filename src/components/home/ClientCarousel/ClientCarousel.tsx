@@ -1,15 +1,16 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { fadeIn, staggerContainer } from '../../../styles/animations';
 import useClientCarousel from './useClientCarousel';
+import { useTranslation } from 'react-i18next';
 
 const clients = [
   { name: 'Alakaria', logo: '/Clients Logo/Alakaria.jpg' },
   { name: 'Awqaf', logo: '/Clients Logo/Awqaf.png' },
   { name: 'Bayan', logo: '/Clients Logo/Bayan.jpg' },
   { name: 'EEC', logo: '/Clients Logo/EEC.png' },
-  { name: 'ELM', logo: '/Clients Logo/ELM.png' },
+  { name: 'ELM', logo: '/Clients Logo/ELM.svg' },
   { name: 'Fransi Saudi Bank', logo: '/Clients Logo/Fransi Saudi Bank.jpg' },
   { name: 'G20 Saudi', logo: '/Clients Logo/Alat.svg' },
   { name: 'GAMI', logo: '/Clients Logo/GAMI.svg' },
@@ -20,7 +21,25 @@ const clients = [
   { name: 'TETCO', logo: '/Clients Logo/TETCO.jpg' },
   { name: 'seven', logo: '/Clients Logo/Seven.png' },
   { name: 'riyadh airports', logo: '/Clients Logo/riyadh_airports.svg' },
+  { name: 'baladna', logo: '/Clients Logo/baladna.png' },
+  { name: 'DC', logo: '/Clients Logo/DC.jpg' },
+  { name: 'DGA', logo: '/Clients Logo/DGA.jpg' },
+  { name: 'esport', logo: '/Clients Logo/esport.jpg' },
+  { name: 'GAC', logo: '/Clients Logo/GAC.jpg' },
+  { name: 'HRC', logo: '/Clients Logo/HRC.jpg' },
+  { name: 'JCD', logo: '/Clients Logo/JCD.jpg' },
+  { name: 'KFCA', logo: '/Clients Logo/KFCA.png' },
+  { name: 'MAWANI', logo: '/Clients Logo/MAWANI.jpg' },
+  { name: 'MOI', logo: '/Clients Logo/MOI.png' },
+  { name: 'neo', logo: '/Clients Logo/neo.jpg' },
+  { name: 'Qiddiya', logo: '/Clients Logo/Qiddiya.png' },
+  { name: 'Rotana', logo: '/Clients Logo/Rotana.png' },
+  { name: 'SIDF', logo: '/Clients Logo/SIDF.png' },
+  { name: 'SITE', logo: '/Clients Logo/SITE.png' },
+  { name: 'tabadul', logo: '/Clients Logo/tabadul.jpg' },
+  { name: 'ttech', logo: '/Clients Logo/ttech.png' },
 ];
+
 
 function ClientCard({ name, logo }: { name: string; logo: string }) {
   return (
@@ -36,6 +55,8 @@ function ClientCard({ name, logo }: { name: string; logo: string }) {
 }
 
 export default function ClientCarousel() {
+  const { t } = useTranslation('ClientCarousel.Home');
+
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollLeft, scrollRight, canScrollLeft, canScrollRight } = useClientCarousel(containerRef);
 
@@ -53,13 +74,13 @@ export default function ClientCarousel() {
             variants={fadeIn}
             className="text-4xl font-extrabold mb-4"
           >
-            Who We Work With
+            {t('clientcarousel.title')}
           </motion.h2>
           <motion.p
             variants={fadeIn}
             className="text-lg"
           >
-            Our trusted clients thrive with our ERP solutions.
+              {t('clientcarousel.description')}
           </motion.p>
         </motion.div>
       </div>

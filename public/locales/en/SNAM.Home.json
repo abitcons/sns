@@ -1,0 +1,43 @@
+{
+    "about_snam": {
+      "title": "Our Solutions",
+      "description1": "Discover SNAM's",
+      "description2": "SAP-qualified partner-packaged solutions",
+      "description3": "designed to empower organizations and government entities across Saudi Arabia and the Middle East. Our innovative platforms embrace cutting-edge technology to enhance operational efficiency and drive sustainable growth.",
+      "badge1": "SNAM Solutions are",
+      "badge2": "SAP-Qualified Partner-Packaged Solutions",
+      "solutionstitle": "Transform Your Operations",
+      "solutions": [
+        {
+          "title": "SNAM Travel",
+          "description": "Simplifying business travel processes with seamless SAP integration for cost-effective and efficient solutions.",
+          "features": ["Automated expense reports", "Policy compliance", "Travel analytics"],
+          "logo": "/SNAM-Logos/SNAM-travel.svg"
+        },
+        {
+          "title": "SNAM Muqeem",
+          "description": "Offering efficient management of resident and visa compliance for government and corporate entities.",
+          "features": ["Visa tracking", "Document management", "Compliance monitoring"],
+          "logo": "/SNAM-Logos/SNAM-muqeem.svg"
+        },
+        {
+          "title": "SNAM Yaqeen",
+          "description": "Enhancing secure identity verification using advanced technology tailored to regional needs.",
+          "features": ["Biometric verification", "Real-time validation", "Secure access"],
+          "logo": "/SNAM-Logos/SNAM-yaqeen.svg"
+        },
+        {
+          "title": "SNAM AI",
+          "description": "Harnessing artificial intelligence to deliver predictive insights, automate processes, and empower data-driven decisions.",
+          "features": ["Predictive analytics", "Process automation", "Smart insights"],
+          "logo": "/SNAM-Logos/SNAM-AI.svg"
+        }
+      ],
+      "cta": {
+        "title": "Ready to Transform Your Organization?",
+        "description": "Experience how SNAM's innovative solutions can revolutionize your operations.",
+        "button": "View Solutions"
+      }
+    }
+  }
+  

@@ -1,109 +1,179 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { ArrowUpRight } from 'lucide-react';
 
-const managementTeam = [
+type TeamMember = {
+  name: string;
+  title: string;
+  bio: string;
+  expertise: string;
+  imageUrl: string;
+};
+
+const managementTeam: TeamMember[] = [
   {
     name: 'Abdulmajeed Almousa',
     title: 'CEO & Founder',
-    bio: 'With over 20 years of experience in digital transformation and business consulting, Abdulmajeed is the visionary leader behind SNS’s success, driving innovation and excellence aligned with Saudi Vision 2030.',
-    expertise: 'Digital Transformation, SAP Solutions',
-    imageUrl: '/images/team/abdulmajeed.jpg',
+    bio: 'With over 20 years of expertise, Abdulmajeed leads SNS in delivering innovative SAP solutions. His visionary leadership aligns with Saudi Vision 2030, fostering innovation and operational excellence.',
+    expertise: 'Digital Transformation, SAP Solutions, Vision 2030',
+    imageUrl: '/images/team/abdulmajeed.jpg'
+  },
+  {
+    name: 'Kamal Zeidan',
+    title: 'Chief Operating Officer',
+    bio: 'Kamal brings extensive expertise in healthcare, business, and IT. With a background as head of ICE and national therapy manager, Kamal has worked with leading companies like Olayan Group, Al Jomaih, and AlphaIota, driving operational excellence.',
+    expertise: 'Healthcare Management, Business Strategy, Operational Excellence',
+    imageUrl: '/images/team//Kamal.png'
   },
   {
     name: 'Abdulwahab Alshaer',
     title: 'VP Business Development',
-    bio: 'Abdulwahab is responsible for strategic partnerships and spearheading market expansion efforts. His expertise ensures SNS achieves sustainable growth and long-term collaborations.',
-    expertise: 'Business Strategy, Market Expansion',
-    imageUrl: '/images/team/abdulwahab.jpg',
+    bio: 'Abdulwahab drives strategic partnerships and market expansion for SNS. His expertise ensures sustainable growth and strengthens SNS role as a trusted digital solutions provider.',
+    expertise: 'Strategic Partnerships, Market Expansion, Business Strategy',
+    imageUrl: '/images/team/abdulwahab.jpg'
   },
   {
     name: 'Waqas Ahmad',
     title: 'VP Delivery',
-    bio: 'With a proven track record in managing complex projects, Waqas ensures the seamless delivery of SAP and digital transformation initiatives that exceed client expectations.',
-    expertise: 'Project Management, SAP Implementation',
-    imageUrl: '/images/team/waqas.jpg',
+    bio: 'Waqas excels in managing complex SAP projects with a customer-focused approach. His expertise ensures seamless delivery, driving productivity and compliance for clients.',
+    expertise: 'Project Management, SAP Implementation, Customer Success',
+    imageUrl: '/images/team/waqas.jpg'
   },
   {
     name: 'Muhammad Abbas',
     title: 'Operations Director',
-    bio: 'Ghazanfar oversees the operational framework at SNS, ensuring consistent service quality and operational efficiency across all offerings.',
-    expertise: 'Operations Management, IT Strategy',
-    imageUrl: '/images/team/ghazanfar.jpg',
+    bio: 'Muhammad ensures operational efficiency and service excellence at SNS. His strategic approach enhances long-term success for clients across diverse industries.',
+    expertise: 'Operations Management, IT Strategy, Service Excellence',
+    imageUrl: '/images/team/ghazanfar.png'
   },
   {
     name: 'Carlos Torres',
     title: 'VP Product & Innovation',
-    bio: 'Carlos drives product innovation and business development strategies, ensuring SNS stays ahead in providing cutting-edge solutions tailored to client needs.',
-    expertise: 'Product Development, Business Development',
-    imageUrl: '/images/team/carlos.png',
-  },
+    bio: 'Carlos spearheads product innovation at SNS, delivering tailored SAP solutions. His forward-thinking strategies ensure SNS meets evolving business needs.',
+    expertise: 'Product Innovation, Business Development, SAP Solutions',
+    imageUrl: '/images/team/carlos.png'
+  }
 ];
 
-export default function ManagementTeam() {
-  const [hoveredMember, setHoveredMember] = useState(null);
+const ManagementTeam: React.FC = () => {
+  const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
 
   return (
-    <section className="py-20 bg-gradient-to-br from-[#36a0d0] via-[#5bb6bb] to-[#6ec6ab] text-white relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-extrabold text-center mb-8">Meet Our Visionary Team</h2>
-        <p className="text-lg text-center mb-12 max-w-3xl mx-auto text-white/90">
-          Our team of experts drives innovation and success through leadership, vision, and strategic execution.
-        </p>
+    <section className="py-24 bg-gradient-to-br from-[#36a0d0] via-[#5bb6bb] to-[#6ec6ab]">
+      
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="text-center">
+          <h2 className="text-5xl font-bold mb-6 text-white">Leadership Team</h2>
+          <p className="text-xl mb-16 max-w-3xl mx-auto text-white/90">
+            Pioneering digital transformation through strategic vision and innovation excellence
+          </p>
+        </div>
 
-        {/* Team Members */}
-        <div className="flex justify-center flex-wrap gap-6">
-          {managementTeam.map((member, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-              onMouseEnter={() => setHoveredMember(member)}
-              onMouseLeave={() => setHoveredMember(null)}
-              className="relative bg-white text-gray-900 rounded-lg shadow-lg p-4 w-[200px] flex flex-col items-center text-center transition-transform duration-300 hover:scale-105"
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {managementTeam.map((member) => (
+            <div
+              key={member.name}
+              className="h-full"
             >
-              <img
-                src={member.imageUrl}
-                alt={member.name}
-                className="w-28 h-28 rounded-full mb-4 border-4 border-[#36a0d0]"
-              />
-              <h3 className="text-sm font-bold mb-1">{member.name}</h3>
-              <p className="text-primary font-semibold text-xs">{member.title}</p>
-
-              {/* Popup Bio */}
-              {hoveredMember === member && (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1.2 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  className="absolute top-[-50%] left-[-50%] transform translate-x-1/2 translate-y-1/2 bg-white text-gray-900 rounded-lg shadow-2xl p-6 z-50 flex flex-col items-center"
-                  style={{
-                    width: '300px',
-                    height: '400px',
-                  }}
-                  transition={{
-                    type: 'spring',
-                    stiffness: 300,
-                    damping: 20,
-                  }}
-                >
-                  <img
-                    src={member.imageUrl}
-                    alt={member.name}
-                    className="w-24 h-24 rounded-full mb-3 border-4 border-[#36a0d0]"
-                  />
-                  <h3 className="text-base font-bold mb-1">{member.name}</h3>
-                  <p className="text-primary font-semibold text-xs mb-2">{member.title}</p>
-                  <p className="text-sm text-gray-700 text-center mb-3">{member.bio}</p>
-                  <p className="text-xs text-gray-500 italic">
-                    <span className="font-semibold">Expertise:</span> {member.expertise}
-                  </p>
-                </motion.div>
-              )}
-            </motion.div>
+              <div
+                onClick={() => setSelectedMember(member)}
+                className="bg-white rounded-2xl shadow-lg 
+                          transform transition-all duration-300 hover:scale-105
+                          cursor-pointer h-full"
+              >
+                {/* Image Container - Fixed Height */}
+                <div className="h-32 p-6">
+                  <div className="relative inline-block">
+                    <img
+                      src={member.imageUrl}
+                      alt={member.name}
+                      className="w-24 h-24 rounded-xl object-cover shadow-md"
+                    />
+                    <div className="absolute -bottom-2 -right-2 bg-[#36a0d0] p-2 rounded-lg shadow-sm">
+                      <ArrowUpRight className="w-4 h-4 text-white" />
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Content Container - Fixed Padding */}
+                <div className="px-6 pb-6">
+                  <h3 className="text-lg font-bold text-gray-900 mb-1">{member.name}</h3>
+                  <p className="text-[#36a0d0] font-medium text-sm mb-3">{member.title}</p>
+                  <p className="text-gray-600 text-sm line-clamp-4 min-h-[5rem] mb-2">{member.bio}</p>
+                  
+                  {/* Tags Container - Fixed Height */}
+                  <div className="pt-4 mt-4 border-t border-gray-100">
+                    <div className="flex flex-row gap-2 whitespace-nowrap overflow-hidden">
+                      {member.expertise.split(', ').slice(0, 2).map((skill) => (
+                        <span
+                          key={skill}
+                          className="bg-[#36a0d0]/10 text-[#36a0d0] px-3 py-1 rounded-full text-sm font-medium shrink-0"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </div>
+
+      {selectedMember && (
+        <div
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+          onClick={() => setSelectedMember(null)}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="bg-white rounded-2xl p-8 max-w-2xl w-full text-gray-900 relative shadow-2xl"
+          >
+            <button
+              onClick={() => setSelectedMember(null)}
+              className="absolute top-6 right-6 bg-gray-100 hover:bg-gray-200 rounded-full p-2 transition-colors duration-200"
+            >
+              ✕
+            </button>
+
+            <div className="flex flex-col md:flex-row md:items-start gap-8">
+              <div className="flex-shrink-0">
+                <img
+                  src={selectedMember.imageUrl}
+                  alt={selectedMember.name}
+                  className="w-32 h-32 rounded-xl shadow-lg object-cover border-4 border-[#36a0d0]"
+                />
+              </div>
+              
+              <div className="flex-grow">
+                <h3 className="text-3xl font-bold mb-2">{selectedMember.name}</h3>
+                <p className="text-[#36a0d0] font-semibold text-lg mb-6">{selectedMember.title}</p>
+                
+                <div className="prose prose-lg text-gray-600 mb-8">
+                  <p>{selectedMember.bio}</p>
+                </div>
+                
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-3">Areas of Expertise</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {selectedMember.expertise.split(', ').map((skill) => (
+                      <span
+                        key={skill}
+                        className="bg-[#36a0d0]/10 text-[#36a0d0] px-4 py-2 rounded-full text-sm font-medium"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
-}
+};
+
+export default ManagementTeam;

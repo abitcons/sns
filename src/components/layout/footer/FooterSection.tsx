@@ -1,14 +1,24 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { fadeIn, staggerContainer } from '../../../styles/animations';
 import FooterColumn from './FooterColumn';
 import FooterSocial from './FooterSocial';
+import { useTranslation } from 'react-i18next';
+import { useEffect } from 'react';
 
 export default function FooterSection() {
+  const { t, i18n } = useTranslation('common');
+  const isRtl = i18n.dir() === 'rtl';
+
+  // Update document direction when language changes
+  useEffect(() => {
+    document.dir = isRtl ? 'rtl' : 'ltr';
+  }, [isRtl]);
+
   return (
     <footer className="relative bg-gradient-to-r from-primary via-secondary to-accent">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-wfull mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* First section remains the same */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -17,116 +27,122 @@ export default function FooterSection() {
           className="grid grid-cols-1 md:grid-cols-3 gap-16"
         >
           {/* Column 1: About */}
-          <motion.div
-            variants={fadeIn}
-            className="flex flex-col items-start space-y-6"
-          >
-            <motion.img
-              src="/Logo/SNS-logo-white.svg"
-              alt="SNS Logo"
-              className="h-16 w-auto"
-              whileHover={{ scale: 1.1 }}
-              transition={{ type: 'spring', stiffness: 300 }}
-            />
-            <motion.p
-              className="text-lg font-semibold text-white"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              Leading AI and SAP Solution Provider in KSA
+          <motion.div variants={fadeIn} className="flex flex-col items-start space-y-6">
+            <Link to="/" className="block">
+              <motion.img
+                src="/Logo/SNS-logo-white.svg"
+                alt={t('footer.logo.alt')}
+                className="h-16 w-auto"
+                whileHover={{ scale: 1.1 }}
+                transition={{ type: 'spring', stiffness: 300 }}
+              />
+            </Link>
+            <motion.p className="text-lg font-semibold text-white text-justify">
+              {t('footer.tagline')}
             </motion.p>
-            <motion.p
-              className="text-base text-white/90 leading-relaxed"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              Empowering businesses through digital transformation and
-              innovative solutions.
+            <motion.p className="text-base text-white/90 leading-relaxed">
+              {t('footer.description')}
             </motion.p>
-            <FooterSocial />
+            <div className="flex items-center space-x-8 mt-4">
+              <img
+                src="/Logo/SAP Gold partner .svg"
+                alt={t('footer.sap_gold_partner.alt')}
+                className="h-12 w-auto"
+              />
+              <img
+                src="/Logo/SAP Certified-white .png"
+                alt={t('footer.sap_certified.alt')}
+                className="h-12 w-auto"
+                style={{ filter: 'brightness(0) invert(1)' }}
+              />
+            </div>
           </motion.div>
 
           {/* Column 2: Quick Links */}
           <motion.div variants={fadeIn} className="flex flex-col space-y-6">
-            <h3 className="text-lg font-bold text-white">Quick Links</h3>
+            <h3 className="text-lg font-bold text-white">
+              {t('footer.quick_links.title')}
+            </h3>
             <FooterColumn
               links={[
-                { label: 'About Us', href: '/about' },
-                { label: 'Services', href: '/services' },
-                { label: 'Solutions', href: '/solutions' },
-                { label: 'Careers', href: '/careers' },
+                { label: t('footer.quick_links.about'), href: '/about' },
+                { label: t('footer.quick_links.services'), href: '/services' },
+                { label: t('footer.quick_links.customer_success'), href: '/customer-success' },
+                { label: t('footer.quick_links.solutions'), href: '/solutions' },
+                { label: t('footer.quick_links.careers'), href: '/careers' },
               ]}
+              title=""
             />
           </motion.div>
 
           {/* Column 3: Contact */}
           <motion.div variants={fadeIn} className="flex flex-col space-y-6">
-            <h3 className="text-lg font-bold text-white">Contact</h3>
+            <h3 className="text-lg font-bold text-white">
+              {t('footer.contact.title')}
+            </h3>
             <FooterColumn
               links={[
                 {
-                  label: 'King Fahd Road, Al Nakheel Tower, Riyadh',
-                  href: 'https://goo.gl/maps/your-location',
+                  label: t('footer.contact.address'),
+                  href: 'https://maps.app.goo.gl/sHdn7DRLLf3jf7Cy7',
                   icon: 'MapPin',
                 },
                 {
-                  label: '+966-11-225-5437',
+                  label: t('footer.contact.phone'),
                   href: 'tel:+966112255437',
                   icon: 'Phone',
                 },
                 {
-                  label: 'info@nationalsol.com',
+                  label: t('footer.contact.email'),
                   href: 'mailto:info@nationalsol.com',
                   icon: 'Mail',
                 },
               ]}
+              title=""
             />
-            <motion.div
-              className="flex items-center space-x-8"
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: 'spring', stiffness: 200 }}
-            >
-              <img
-                src="/Logo/SAP Gold partner .svg"
-                alt="SAP Gold Partner Logo"
-                className="h-12 w-auto"
-              />
-              <img
-                src="/Logo/SAP Certified-white .png"
-                alt="SAP Certified Logo"
-                className="h-12 w-auto"
-                style={{
-                  filter: 'brightness(0) invert(1)',
-                }}
-              />
-            </motion.div>
+            <FooterSocial />
           </motion.div>
         </motion.div>
 
-        {/* Divider */}
-        <motion.div
-          variants={fadeIn}
-          className="mt-12 border-t border-white/20 pt-8"
-        >
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+      {/* News and Blogs Section */}
+<div className="mt-8 border-t border-white/20 pt-8">
+  <h3 className="text-lg font-bold text-white text-center mb-4">
+    {t('footer.updates.title')}
+  </h3>
+  <div className={`flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 ${isRtl ? 'md:space-x-reverse' : ''} md:space-x-8`}>
+    <Link
+      to="/news"
+      className="w-full md:w-auto px-6 py-3 bg-accent text-white rounded-lg hover:bg-accent-light transition-all duration-200 text-center"
+    >
+      {t('footer.updates.news_button')}
+    </Link>
+    <Link
+      to="/blog"
+      className="w-full md:w-auto px-6 py-3 bg-accent text-white rounded-lg hover:bg-accent-light transition-all duration-200 text-center"
+    >
+      {t('footer.updates.blog_button')}
+    </Link>
+  </div>
+</div>
+
+        {/* Copyright and Legal */}
+        <motion.div variants={fadeIn} className="mt-12 border-t border-white/20 pt-8">
+          <div className={`flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 ${isRtl ? 'md:space-x-reverse' : ''} md:space-x-6`}>
             <p className="text-sm text-white/90">
-              © {new Date().getFullYear()} Smart National Solutions. All rights
-              reserved.
+              © {new Date().getFullYear()} {t('footer.legal.rights')}
             </p>
-            <div className="flex space-x-6">
+            <div className={`flex ${isRtl ? 'space-x-reverse' : ''} space-x-6`}>
               <Link
-                to="/privacy-policy"
+                to="/privacy-policy-2"
                 className="text-sm text-white/90 hover:text-white transition-all duration-200"
               >
-                Privacy Policy
+                {t('footer.legal.privacy')}
               </Link>
               <Link
-                to="/terms-conditions"
+                to="/terms-and-conditions2"
                 className="text-sm text-white/90 hover:text-white transition-all duration-200"
               >
-                Terms & Conditions
+                {t('footer.legal.terms')}
               </Link>
             </div>
           </div>

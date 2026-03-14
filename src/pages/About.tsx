@@ -1,29 +1,68 @@
-import React from 'react';
+
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { fadeIn, staggerContainer } from '../styles/animations';
-import Lottie from 'lottie-react';
-import Empowerment from '../../public/Animated Icons Vision2030/Empowerment.json';
-import Innovation from '../../public/Animated Icons Vision2030/Innovation.json';
-import Sustainability from '../../public/Animated Icons Vision2030/Sustainability.json';
 import Team from "../components/About/Team";
+import AboutSection from '../components/About/AboutSection';
+import React from 'react';
 
 
 const About = () => {
-  const [ref, inView] = useInView({
+  const [] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
 
   return (
     <>
+      {/* SEO Meta Tags */}
       <Helmet>
-        <title>About Us - Smart National Solutions</title>
-        <meta name="description" content="Learn about Smart National Solutions' mission, values, and contributions to Vision 2030 in Saudi Arabia." />
+        <title>About Us - Smart National Solutions | Digital Transformation in Saudi Arabia</title>
+        <meta
+          name="description"
+          content="Discover how Smart National Solutions (SNS) leads digital transformation in Saudi Arabia with tailored SAP solutions, innovation, and contributions to Vision 2030."
+        />
+        <meta
+          name="keywords"
+          content="Smart National Solutions, SAP Gold Partner, Saudi Vision 2030, digital transformation, SAP solutions, Riyadh technology company, innovation in KSA"
+        />
+        <link rel="canonical" href="https://www.nationalsol.com/about" />
+        <meta property="og:title" content="About Us - Smart National Solutions | Digital Transformation in Saudi Arabia" />
+        <meta
+          property="og:description"
+          content="Learn about Smart National Solutions, our mission, values, and achievements. Discover how we empower businesses in Saudi Arabia with innovative solutions aligned with Vision 2030."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.nationalsol.com/about" />
+        <meta property="og:image" content="/images/about-sns-og.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About Us - Smart National Solutions" />
+        <meta
+          name="twitter:description"
+          content="Smart National Solutions specializes in cutting-edge SAP solutions and digital transformation, driving Vision 2030 objectives in Saudi Arabia."
+        />
+        <meta name="twitter:image" content="/images/about-sns-og.jpg" />
       </Helmet>
+
+      {/* Structured Data for SEO */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "About Us",
+          description:
+            "Discover how Smart National Solutions leads digital transformation in Saudi Arabia with tailored SAP solutions, innovation, and contributions to Vision 2030.",
+          url: "https://www.nationalsol.com/about",
+          publisher: {
+            "@type": "Organization",
+            name: "Smart National Solutions",
+            logo: "https://www.nationalsol.com/logo.png",
+          },
+        })}
+      </script>
 
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-[#36a0d0] via-[#5bb6bb] to-[#6ec6ab] text-white text-center">
@@ -32,66 +71,147 @@ const About = () => {
             Transforming Tomorrow with Smart National Solutions
           </motion.h1>
           <motion.p variants={fadeIn} className="text-lg leading-relaxed">
-            Leading digital transformation and innovation for a better future.
+            Leading digital transformation and innovation for a better future aligned with Vision 2030.
           </motion.p>
         </div>
       </section>
 
-     {/* About SNS Section */}
-<section className="py-20 bg-gradient-to-r from-gray-100 via-white to-gray-50">
-  <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center px-4 sm:px-6 lg:px-8">
-    {/* Image Section with Animation */}
-    <motion.div
-      initial={{ opacity: 0, x: -100 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 1 }}
-      className="relative"
-    >
-      <img
-        src="/images/Whoweare.jpg"
-        alt="About SNS"
-        className="rounded-xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
-      />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#5bb6bb] to-[#36a0d0] opacity-20 rounded-xl"></div>
-    </motion.div>
+{/* About Section */}
+<AboutSection/>
 
-    {/* Text Section with Animation */}
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
+{/* Company History Section */}
+<section className="py-20 bg-gray-50 relative overflow-hidden">
+  {/* Gradient Background for Headline and Subheadline */}
+  <motion.div
+    initial={{ opacity: 0, y: -50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.8 }}
+    className="bg-gradient-to-r from-[#36a0d0] via-[#5bb6bb] to-[#6ec6ab] py-12 text-white"
+  >
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <motion.h1
+        initial={{ scale: 0.9 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 0.8 }}
+        className="text-5xl font-extrabold mb-4"
+      >
+        Our Journey
+      </motion.h1>
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.2, duration: 0.8 }}
+        className="text-lg max-w-3xl mx-auto leading-relaxed"
+      >
+        Milestones of Excellence in Driving Digital Transformation Across Saudi Arabia and the Middle East.
+      </motion.p>
+    </div>
+  </motion.div>
+
+  {/* Journey Map Section */}
+  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
+    <div className="flex items-center relative">
+      {[2010, 2015, 2020, 2023].map((year, index) => (
+        <React.Fragment key={year}>
+          {/* Milestone */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: index * 0.4 }}
+            className="relative flex flex-col items-center text-center mx-4"
+          >
+            <motion.div
+              whileHover={{ scale: 1.15 }}
+              className="w-32 h-32 bg-white rounded-full shadow-lg flex items-center justify-center mb-6"
+            >
+              <img
+                src={`/Icons/${
+                  year === 2010
+                    ? "SNS-Icon-Logo"
+                    : year === 2015
+                    ? "SAPGold"
+                    : year === 2020
+                    ? "SNAM"
+                    : "Expansion"
+                }.svg`}
+                alt={`${year}`}
+                className={`${
+                  year === 2010 || year === 2015 ? "h-24 w-24" : "h-20 w-20"
+                }`}
+              />
+            </motion.div>
+            {/* Year */}
+            <h3 className="text-3xl font-semibold text-primary mb-2">{year}</h3>
+            {/* Headline */}
+            <h4 className="text-xl font-bold text-gray-800 mb-2">
+              {year === 2010
+                ? "Founded in Riyadh"
+                : year === 2015
+                ? "SAP Gold Partnership"
+                : year === 2020
+                ? "Innovating with AI"
+                : "Regional Expansion"}
+            </h4>
+            {/* Description */}
+            <p className="text-gray-600 leading-relaxed max-w-sm">
+              {year === 2010
+                ? "Smart National Solutions (SNS) began its journey in Riyadh, Saudi Arabia, with the goal of leading the digital transformation landscape."
+                : year === 2015
+                ? "Achieved SAP Gold Partner status, showcasing expertise in delivering SAP solutions across Saudi Arabia."
+                : year === 2020
+                ? "Launched SNAM AI, revolutionizing operational efficiency with cutting-edge AI-driven solutions."
+                : "Expanded operations to GCC countries, delivering tailored digital solutions across the region."}
+            </p>
+          </motion.div>
+
+          {/* Arrow */}
+          {index < 3 && (
+            <div className="flex justify-center items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-10 h-10 text-primary"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13 7l5 5m0 0l-5 5m5-5H6"
+                />
+              </svg>
+            </div>
+          )}
+        </React.Fragment>
+      ))}
+    </div>
+  </div>
+
+  {/* CTA Section */}
+  <div className="mt-16 py-10 bg-gradient-to-r from-[#36a0d0] via-[#5bb6bb] to-[#6ec6ab] text-center rounded-lg shadow-lg">
+    <h3 className="text-4xl font-bold text-white mb-4">
+      Ready to Transform Your Business?
+    </h3>
+    <p className="text-lg text-white/90 mb-6 max-w-3xl mx-auto">
+      Discover how we can help your organization achieve its digital transformation goals with tailored solutions and expert guidance.
+    </p>
+    <a
+      href="/contact"
+      className="inline-block bg-white text-primary font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-gray-100 transition-all duration-300"
     >
-      <h2 className="text-4xl font-bold text-gray-800 mb-6">
-        About Smart National Solutions
-      </h2>
-      <p className="text-lg leading-relaxed text-gray-700 mb-6">
-        Smart National Solutions (SNS) is a premier Saudi company specializing in cutting-edge technology and business consulting services. As an SAP® Gold Partner, we enable digital transformation through tailored solutions designed for excellence.
-      </p>
-      <ul className="list-disc pl-5 text-lg text-gray-700 space-y-3">
-        <li>
-          <span className="font-semibold">Headquartered in Riyadh:</span> With regional and global reach.
-        </li>
-        <li>
-          <span className="font-semibold">Specialized Expertise:</span> SAP S/4HANA, SuccessFactors®, Ariba, and more.
-        </li>
-        <li>
-          <span className="font-semibold">Proven Track Record:</span> Over 50 successful implementations and 20+ AMS projects.
-        </li>
-      </ul>
-      <div className="mt-8">
-        <a
-          href="/contact"
-          className="inline-block px-6 py-3 bg-primary text-white rounded-lg font-semibold shadow-lg hover:bg-primary/90 transition-all duration-300"
-        >
-          Learn More About Us
-        </a>
-      </div>
-    </motion.div>
+      Contact Us Today
+    </a>
   </div>
 </section>
-   {/* Team Section */}
-   <Team/>
-    {/* CEO Message Section */}
+
+
+
+
+ {/* CEO Message Section */}
 <section className="py-20 bg-white">
   <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center px-4 sm:px-6 lg:px-8">
     {/* Text Section */}
@@ -105,10 +225,13 @@ const About = () => {
         A Message from Our CEO
       </h2>
       <p className="text-lg text-gray-700 leading-relaxed mb-6">
-        "At Smart National Solutions (SNS), we are dedicated to redefining how businesses approach innovation and efficiency. Guided by Saudi Vision 2030, our mission is to localize expertise, nurture talent, and deliver tailored solutions that empower our clients to achieve operational excellence."
+        "At Smart National Solutions (SNS), we are pioneering a new era of digital transformation in the Kingdom of Saudi Arabia and the Middle East. Guided by Saudi Vision 2030, we leverage advanced AI-powered solutions and SAP integrations to drive innovation, enhance operational efficiency, and deliver unmatched value to our clients."
       </p>
       <p className="text-lg text-gray-700 leading-relaxed mb-6">
-        Our commitment to innovation, integrity, and customer-centric solutions drives our journey as a trusted SAP Gold Partner. Together, we aim to transform businesses and create a brighter, sustainable future for the Kingdom and beyond.
+        By integrating cutting-edge AI technologies into our services, SNS empowers businesses to make smarter decisions, optimize processes, and stay ahead in a competitive landscape. Our AI solutions, combined with our expertise as an SAP Gold Partner, set a new benchmark for excellence and reliability in the region.
+      </p>
+      <p className="text-lg text-gray-700 leading-relaxed mb-6">
+        Together, let us embrace the transformative potential of AI and innovation to create a sustainable and prosperous future for the Kingdom and beyond."
       </p>
       <div className="mt-6">
         <p className="text-xl font-semibold text-gray-900">Abdulmajed Almousa</p>
@@ -125,13 +248,14 @@ const About = () => {
     >
       <img
         src="/images/CEO.jpg"
-        alt="CEO"
+        alt="CEO Abdulmajed Almousa"
         className="rounded-lg shadow-lg w-full lg:w-[80%] xl:w-[90%] hover:scale-105 transition-transform duration-300"
       />
     </motion.div>
   </div>
 </section>
-
+ {/* Team Section */}
+ <Team/>
 
 
 {/* Achievements Section */}
@@ -521,8 +645,8 @@ const About = () => {
 </section>
 
 {/* Discover Our Creative Solutions Section */}
-<section className="py-20 bg-gray-100">
-  <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center px-4 sm:px-6 lg:px-8">
+<section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100 relative">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center px-6 sm:px-8 lg:px-12">
     {/* Image Section */}
     <motion.div
       initial={{ opacity: 0, x: -50 }}
@@ -531,11 +655,14 @@ const About = () => {
       transition={{ duration: 0.8 }}
       className="flex justify-center"
     >
-      <img
-        src="/images/Discover SNS solutions.png"
-        alt="Discover SNS Solutions"
-        className="rounded-lg shadow-lg"
-      />
+      <div className="relative w-full max-w-md lg:max-w-lg">
+        <img
+          src="/images/Discover SNS solutions.png"
+          alt="Discover SNS Solutions"
+          className="rounded-lg border border-gray-200 shadow-lg hover:scale-105 transition-transform duration-300"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#36a0d0]/10 rounded-lg"></div>
+      </div>
     </motion.div>
 
     {/* Text Content Section */}
@@ -546,28 +673,29 @@ const About = () => {
       transition={{ duration: 0.8 }}
       className="text-center lg:text-left"
     >
-      <h2 className="text-5xl font-bold text-gray-800 mb-6">
-        Discover Our Creative Solutions
+      <h2 className="text-5xl font-extrabold text-gray-800 mb-6 leading-tight">
+        Discover Advanced Digital Solutions in Saudi Arabia
       </h2>
       <p className="text-lg leading-relaxed text-gray-600 mb-6">
-        At Smart National Solutions, we bring innovation and expertise to redefine business processes, enabling growth and success in today's dynamic digital era.
+        At <span className="font-semibold text-[#36a0d0]">Smart National Solutions</span> (SNS), we empower businesses in Saudi Arabia and the Middle East with tailored digital solutions. Our expertise drives efficiency, growth, and innovation in the ever-evolving digital landscape.
       </p>
       <p className="text-lg leading-relaxed text-gray-600 mb-6">
-        From enhancing workforce efficiency with SAP® SuccessFactors® add-ons such as SNAM Travel, SNAM Muqeem, and SNAM Yaqeen to providing transformative digital tools, we ensure operational excellence and compliance.
+        With SAP® SuccessFactors® add-ons like <strong>SNAM Travel</strong>, <strong>SNAM Muqeem</strong>, and <strong>SNAM Yaqeen</strong>, we deliver solutions that optimize workflows, ensure compliance, and foster operational excellence.
       </p>
       <p className="text-lg leading-relaxed text-gray-600 mb-8">
-        Explore our cutting-edge solutions that combine advanced technology with innovative design, driving your business toward sustainable success.
+        From AI-driven analytics to transformative enterprise tools, SNS is committed to redefining success for organizations across the region. Let us help your business achieve sustainable growth and a competitive edge.
       </p>
       <Link
         to="/solutions"
         className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#36a0d0] to-[#5bb6bb] text-white rounded-lg font-semibold hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl text-lg"
       >
-        Explore Solutions
+        Explore Our Solutions
         <ArrowRight className="ml-2 h-5 w-5" />
       </Link>
     </motion.div>
   </div>
 </section>
+
 
 
 
