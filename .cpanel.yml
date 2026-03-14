@@ -1,0 +1,10 @@
+---
+deployment:
+  tasks:
+    - export APPPATH=/home1/abitcons/repositories/sns
+    - export DEPLOYPATH=/home1/abitcons/public_html/sns.sbodesk.com
+    - cd $APPPATH
+    - npm ci
+    - npm run build
+    - mkdir -p $DEPLOYPATH
+    - cp -R dist/* $DEPLOYPATH
