@@ -43,7 +43,7 @@ jobs:
           protocol: ftps
           port: 21
           local-dir: ./dist/
-          server-dir: /
+          server-dir: public_html/sns.sbodesk.com/
           dangerous-clean-slate: false
           exclude: |
             **/.git*
