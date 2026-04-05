@@ -38,7 +38,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
           # Use the origin FTP server directly; the proxied domain resolves to Cloudflare and blocks port 21.
-          server: 148.163.100.132
+          server: ${{ secrets.CPANEL_FTP_HOST }}
           username: ${{ secrets.CPANEL_FTP_USERNAME }}
           password: ${{ secrets.CPANEL_FTP_PASSWORD }}
           protocol: ftps
