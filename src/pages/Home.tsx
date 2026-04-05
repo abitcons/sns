@@ -48,7 +48,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="mb-12"
+            className="mb-12 "
           >
             <h2 className="text-4xl font-bold text-[#36a0d0] mb-4">
               {t('why_choose_sns.section_title')} {/* Translated title */}
