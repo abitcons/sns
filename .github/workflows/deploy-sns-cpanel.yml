@@ -39,7 +39,7 @@ jobs:
           CPANEL_FTP_HOST: ${{ secrets.CPANEL_FTP_HOST }}
           CPANEL_FTP_USERNAME: ${{ secrets.CPANEL_FTP_USERNAME }}
           CPANEL_FTP_PASSWORD: ${{ secrets.CPANEL_FTP_PASSWORD }}
-          REMOTE_ROOT: /public_html/sns.sbodesk.com
+          REMOTE_ROOTS: /public_html/sns.sbodesk.com,sns.sbodesk.com
         run: |
           python - <<'PY'
           import os
@@ -49,8 +49,12 @@ jobs:
           host = os.environ["CPANEL_FTP_HOST"]
           username = os.environ["CPANEL_FTP_USERNAME"]
           password = os.environ["CPANEL_FTP_PASSWORD"]
-          remote_root = os.environ["REMOTE_ROOT"].strip("/")
           local_root = Path("dist")
+          remote_roots = [
+              root.strip("/")
+              for root in os.environ["REMOTE_ROOTS"].split(",")
+              if root.strip("/")
+          ]
 
           def ensure_path(ftp, parts):
               ftp.cwd("/")
@@ -66,6 +70,23 @@ jobs:
                           pass
                       ftp.cwd(part)
 
+          def upload_tree(ftp, remote_root):
+              base_parts = [part for part in remote_root.split("/") if part]
+              files = sorted(
+                  path for path in local_root.rglob("*")
+                  if path.is_file() and path.name != ".ftp-deploy-sync-state.json"
+              )
+
+              print(f"Uploading to /{'/'.join(base_parts)} ({len(files)} files)")
+              for index, path in enumerate(files, start=1):
+                  rel = path.relative_to(local_root)
+                  parent_parts = list(rel.parent.parts) if rel.parent != Path(".") else []
+                  ensure_path(ftp, base_parts + parent_parts)
+                  with path.open("rb") as handle:
+                      if index == 1 or index % 10 == 0:
+                          print(f"Uploading {index}/{len(files)}: {rel.as_posix()}")
+                      ftp.storbinary(f"STOR {rel.name}", handle)
+
           ftp = FTP_TLS()
           ftp.connect(host, 21, timeout=120)
           ftp.auth()
@@ -73,20 +94,9 @@ jobs:
           ftp.prot_p()
           ftp.set_pasv(True)
 
-          base_parts = [part for part in remote_root.split("/") if part]
-          files = sorted(
-              path for path in local_root.rglob("*")
-              if path.is_file() and path.name != ".ftp-deploy-sync-state.json"
-          )
-
-          for index, path in enumerate(files, start=1):
-              rel = path.relative_to(local_root)
-              parent_parts = list(rel.parent.parts) if rel.parent != Path(".") else []
-              ensure_path(ftp, base_parts + parent_parts)
-              with path.open("rb") as handle:
-                  if index == 1 or index % 10 == 0:
-                      print(f"Uploading {index}/{len(files)}: {rel.as_posix()}")
-                  ftp.storbinary(f"STOR {rel.name}", handle)
+          print(f"FTP root is {ftp.pwd()}")
+          for remote_root in remote_roots:
+              upload_tree(ftp, remote_root)
 
           ftp.quit()
           print("UPLOAD_DONE")
