@@ -34,20 +34,60 @@ jobs:
       - name: Build production files
         run: npm run build
 
-      - name: Deploy dist to cPanel
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
-        with:
-          # Use the origin FTP server directly; the proxied domain resolves to Cloudflare and blocks port 21.
-          server: ${{ secrets.CPANEL_FTP_HOST }}
-          username: ${{ secrets.CPANEL_FTP_USERNAME }}
-          password: ${{ secrets.CPANEL_FTP_PASSWORD }}
-          protocol: ftps
-          port: 21
-          local-dir: ./dist/
-          server-dir: public_html/sns.sbodesk.com/
-          dangerous-clean-slate: false
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/node_modules/**
-            **/*.zip
+      - name: Upload dist to cPanel without deleting remote files
+        env:
+          CPANEL_FTP_HOST: ${{ secrets.CPANEL_FTP_HOST }}
+          CPANEL_FTP_USERNAME: ${{ secrets.CPANEL_FTP_USERNAME }}
+          CPANEL_FTP_PASSWORD: ${{ secrets.CPANEL_FTP_PASSWORD }}
+          REMOTE_ROOT: /public_html/sns.sbodesk.com
+        run: |
+          python - <<'PY'
+          import os
+          from ftplib import FTP_TLS, error_perm
+          from pathlib import Path
+
+          host = os.environ["CPANEL_FTP_HOST"]
+          username = os.environ["CPANEL_FTP_USERNAME"]
+          password = os.environ["CPANEL_FTP_PASSWORD"]
+          remote_root = os.environ["REMOTE_ROOT"].strip("/")
+          local_root = Path("dist")
+
+          def ensure_path(ftp, parts):
+              ftp.cwd("/")
+              for part in parts:
+                  if not part:
+                      continue
+                  try:
+                      ftp.cwd(part)
+                  except error_perm:
+                      try:
+                          ftp.mkd(part)
+                      except error_perm:
+                          pass
+                      ftp.cwd(part)
+
+          ftp = FTP_TLS()
+          ftp.connect(host, 21, timeout=120)
+          ftp.auth()
+          ftp.login(username, password)
+          ftp.prot_p()
+          ftp.set_pasv(True)
+
+          base_parts = [part for part in remote_root.split("/") if part]
+          files = sorted(
+              path for path in local_root.rglob("*")
+              if path.is_file() and path.name != ".ftp-deploy-sync-state.json"
+          )
+
+          for index, path in enumerate(files, start=1):
+              rel = path.relative_to(local_root)
+              parent_parts = list(rel.parent.parts) if rel.parent != Path(".") else []
+              ensure_path(ftp, base_parts + parent_parts)
+              with path.open("rb") as handle:
+                  if index == 1 or index % 10 == 0:
+                      print(f"Uploading {index}/{len(files)}: {rel.as_posix()}")
+                  ftp.storbinary(f"STOR {rel.name}", handle)
+
+          ftp.quit()
+          print("UPLOAD_DONE")
+          PY
