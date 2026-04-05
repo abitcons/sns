@@ -37,7 +37,8 @@ jobs:
       - name: Deploy dist to cPanel
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
-          server: ${{ secrets.CPANEL_FTP_HOST }}
+          # Use the origin FTP server directly; the proxied domain resolves to Cloudflare and blocks port 21.
+          server: 148.163.100.132
           username: ${{ secrets.CPANEL_FTP_USERNAME }}
           password: ${{ secrets.CPANEL_FTP_PASSWORD }}
           protocol: ftps
