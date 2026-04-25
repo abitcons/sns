@@ -39,7 +39,7 @@ jobs:
           CPANEL_FTP_HOST: ${{ secrets.CPANEL_FTP_HOST }}
           CPANEL_FTP_USERNAME: ${{ secrets.CPANEL_FTP_USERNAME }}
           CPANEL_FTP_PASSWORD: ${{ secrets.CPANEL_FTP_PASSWORD }}
-          REMOTE_ROOTS: /sns-site
+          REMOTE_ROOTS: /public_html/sns.sbodesk.com,sns.sbodesk.com
         run: |
           python - <<'PY'
           import os
