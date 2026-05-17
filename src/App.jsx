@@ -48,6 +48,7 @@ import BlogView from "./components/BlogView";
 import Alphaiota from './pages/Alphaiota';
 import ThinkAi from './pages/ThinkAi';
 import SmartCities from './pages/smart-cities';
+import GoogleAnalytics from './components/analytics/GoogleAnalytics';
 
 // Create Loading Context
 const LoadingContext = createContext({
@@ -181,6 +182,7 @@ const App = () => {
         <CacheProvider value={isRtl ? cacheRtl : cacheLtr}>
             <HelmetProvider>
                 <Router>
+                    <GoogleAnalytics />
                     <LoadingProvider>
                         <div className={`flex flex-col min-h-screen ${isRtl ? 'rtl' : 'ltr'}`}>
                             <Header />
