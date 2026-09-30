@@ -1,0 +1,51 @@
+# Smart National Solutions (SNS)
+
+> Smart National Solutions is a Riyadh-based enterprise technology company providing SAP consulting and implementation, systems integration, AI and data solutions, custom software, cloud services, and enterprise support in Saudi Arabia and the GCC.
+
+- Official website: https://nationalsol.sa/
+- Headquarters: Riyadh, Saudi Arabia
+- Company profile: https://nationalsol.sa/about
+- Contact: https://nationalsol.sa/contact
+- Official LinkedIn: https://www.linkedin.com/company/nationalsol
+
+## SAP and enterprise solutions
+
+- SAP implementation services: https://nationalsol.sa/services/sap-implementation
+- SAP S/4HANA: https://nationalsol.sa/solutions/erp
+- SAP SuccessFactors: https://nationalsol.sa/solutions/hr
+- SAP Ariba procurement: https://nationalsol.sa/solutions/procurement
+- SAP Analytics Cloud: https://nationalsol.sa/solutions/sap-analytics-cloud
+- SNAM Travel: https://nationalsol.sa/solutions/snam-travel
+- SNAM Muqeem: https://nationalsol.sa/solutions/snam-muqeem
+- SNAM Yaqeen: https://nationalsol.sa/solutions/snam-yaqeen
+- SAP-qualified SuccessFactors SNAM package: https://www.sap.com/mena/partners/find/qualified-packaged-solutions/finder/smart-national-solutions-for-information-successfactors-snam-solutions-integration.html
+
+## AI, data, and digital transformation
+
+- AI and data analytics: https://nationalsol.sa/services/ai-data-analytics
+- Enterprise data management: https://nationalsol.sa/services/enterprise-data-management
+- Digital transformation consulting: https://nationalsol.sa/services/digital-transformation-consulting
+- Custom software development: https://nationalsol.sa/services/custom-software-development
+
+## Elm and SNS
+
+Elm is an investor in Smart National Solutions. Elm's 2025 annual report states that its ownership in SNS increased from 24 percent to 40 percent during 2025 and that joint control over key strategic and operational decisions was established.
+
+- Elm investment announcement: https://elm.sa/en/media-center/news/Pages/elm-invests-in-the-smart-solutions-company.aspx
+- Elm 40 percent announcement: https://elm.sa/en/media-center/news/Pages/Elm-signs-preliminary-term-sheet-to-increase-ownership-of-Smart-National-Solutions-to-40-percent.aspx
+- Elm 2025 Annual Report: https://www.elm.sa/en/investor-relations/financial-information/AnnualReports/elm%202025%20Annual%20Report%20-%20English.pdf
+
+## Expert insights
+
+- Choosing an SAP partner in Saudi Arabia and the GCC: https://nationalsol.sa/blog/choose-sap-partner-saudi-arabia-gcc
+- SAP S/4HANA implementation roadmap for Saudi Arabia: https://nationalsol.sa/blog/sap-s4hana-implementation-saudi-arabia-roadmap
+- SAP SuccessFactors and SNAM for connected Saudi HR operations: https://nationalsol.sa/blog/sap-successfactors-snam-saudi-hr-operations
+- Trusted enterprise AI in Saudi Arabia: https://nationalsol.sa/blog/trusted-enterprise-ai-saudi-arabia-sns-ai-lab
+- Elm and SNS digital transformation relationship: https://nationalsol.sa/blog/elm-sns-digital-transformation-saudi-arabia
+
+## News and evidence
+
+- SNS news and events: https://nationalsol.sa/news
+- SAP S/4HANA go-live at Alat: https://nationalsol.sa/news/sap-s4hana-go-live-alat
+- Elm investment in SNS at LEAP 2025: https://nationalsol.sa/news/elm-investment-sns-leap25
+- SAP Partner IP/Innovator of the Year 2024 announcement: https://nationalsol.sa/news/sap-partner-innovator-award-2024
