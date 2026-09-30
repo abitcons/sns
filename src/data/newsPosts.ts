@@ -19,6 +19,42 @@ export const newsPosts: NewsPost[] = [
   
   },
   {
+    title: 'SNS Hosts a Special Evening with Elm Leadership',
+    excerpt: 'Smart National Solutions hosted a special evening celebrating shared achievements and welcoming new leadership from Elm.',
+    category: 'Events',
+    date: 'August 28, 2025',
+    imageUrl: '/images/news/elm-special-evening.jpg',
+    slug: 'elm-leadership-special-evening',
+    author: 'Smart National Solutions',
+    content: 'Smart National Solutions hosted a special evening to celebrate the company’s growth and achievements and to welcome its new Board of Directors. The gathering brought together Mohammad Alomair, CEO of Elm; Alameen Alhazmi, Chief Integrated Solutions Officer at Elm; and Abdulmajeed Almousa, CEO of Smart National Solutions. The evening marked an important milestone in the relationship between SNS and Elm and reflected their shared commitment to leadership, collaboration, and digital innovation in Saudi Arabia.',
+    readTime: '2 min',
+    relatedLogos: []
+  },
+  {
+    title: 'SNS Welcomes Elm Board Members',
+    excerpt: 'SNS welcomed distinguished Elm leaders whose expertise will support the next stage of collaboration and digital transformation.',
+    category: 'Partnerships',
+    date: 'August 28, 2025',
+    imageUrl: '/images/news/elm-board-members.jpg',
+    slug: 'sns-welcomes-elm-board-members',
+    author: 'Smart National Solutions',
+    content: 'Smart National Solutions welcomed distinguished leaders from Elm, including Mohammad Alomair, Alameen Alhazmi, Ahmed Al Fraih, Fahad Alsaawi, and Abdullah Alkhalifah. Their leadership and expertise strengthen the partnership between SNS and Elm and support the development of innovative digital solutions aligned with Saudi Vision 2030. SNS looks forward to building on this collaboration and creating lasting value for organizations across the Kingdom.',
+    readTime: '2 min',
+    relatedLogos: []
+  },
+  {
+    title: 'SNS Announces SAP S/4HANA Go-Live at Alat',
+    excerpt: 'Smart National Solutions successfully delivered an SAP S/4HANA ERP implementation for Alat Saudi Arabia.',
+    category: 'Customer Success',
+    date: 'November 26, 2024',
+    imageUrl: '/images/news/alat-s4hana-go-live.jpg',
+    slug: 'sap-s4hana-go-live-alat',
+    author: 'Smart National Solutions',
+    content: 'Smart National Solutions successfully completed the go-live of an SAP S/4HANA ERP implementation for Alat Saudi Arabia. The milestone included SAP S/4HANA Finance, Materials Management, Ariba Strategic Sourcing, and SAP SuccessFactors. The new platform supports Alat’s growth and operational efficiency while advancing its digital transformation objectives in alignment with Saudi Vision 2030.',
+    readTime: '2 min',
+    relatedLogos: []
+  },
+  {
     title: 'Elms Strategic Investment in SNS at LEAP 25',
     excerpt: 'Elm signs a preliminary agreement to raise ownership in Smart National Solutions to 40%, enhancing digital innovation in line with Saudi Vision 2030.',
     category: 'Partnerships',

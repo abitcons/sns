@@ -32,20 +32,6 @@ const managementTeam: TeamMember[] = [
     imageUrl: '/images/team/abdulwahab.jpg'
   },
   {
-    name: 'Waqas Ahmad',
-    title: 'VP Delivery',
-    bio: 'Waqas excels in managing complex SAP projects with a customer-focused approach. His expertise ensures seamless delivery, driving productivity and compliance for clients.',
-    expertise: 'Project Management, SAP Implementation, Customer Success',
-    imageUrl: '/images/team/waqas.jpg'
-  },
-  {
-    name: 'Muhammad Abbas',
-    title: 'Operations Director',
-    bio: 'Muhammad ensures operational efficiency and service excellence at SNS. His strategic approach enhances long-term success for clients across diverse industries.',
-    expertise: 'Operations Management, IT Strategy, Service Excellence',
-    imageUrl: '/images/team/ghazanfar.png'
-  },
-  {
     name: 'Carlos Torres',
     title: 'VP Product & Innovation',
     bio: 'Carlos spearheads product innovation at SNS, delivering tailored SAP solutions. His forward-thinking strategies ensure SNS meets evolving business needs.',
@@ -69,7 +55,7 @@ const ManagementTeam: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {managementTeam.map((member) => (
             <div
               key={member.name}
