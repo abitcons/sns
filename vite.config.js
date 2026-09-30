@@ -42,8 +42,11 @@ export default defineConfig({
                   output: {
                       manualChunks: undefined, // 🚨 Disable chunking
                       inlineDynamicImports: true, // 🚀 Merge all imports into one
-                      entryFileNames: 'bundle.js', // ✅ Custom bundle filename
-                      assetFileNames: 'style.css', // ✅ Custom CSS filename
+                      entryFileNames: 'bundle-[hash].js',
+                      assetFileNames: (assetInfo) =>
+                          assetInfo.name?.endsWith('.css')
+                              ? 'style-[hash][extname]'
+                              : 'assets/[name]-[hash][extname]',
                   },
               }
             : {},

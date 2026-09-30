@@ -6,7 +6,9 @@
   "scripts": {
     "start": "vite",
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/prerender-blog.mjs",
+    "build:cpanel": "npm run build && node scripts/prepare-cpanel-release.mjs",
+    "submit:indexnow": "node scripts/submit-indexnow.mjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },
