@@ -21,12 +21,31 @@ export interface Statistic {
 }
 export interface BlogPost {
     title: string;
+    seoTitle: string;
     excerpt: string;
+    metaDescription: string;
     category: string;
     date: string;
+    datePublished: string;
+    dateModified: string;
+    author: string;
+    readTime: string;
     imageUrl: string;
+    imageAlt: string;
     slug: string;
+    keywords: string[];
+    keyTakeaways: string[];
+    faqs: BlogFaq[];
+    sources: BlogSource[];
     content: string;
+}
+export interface BlogFaq {
+    question: string;
+    answer: string;
+}
+export interface BlogSource {
+    label: string;
+    url: string;
 }
 export interface Job {
     id: string;

@@ -31,12 +31,33 @@ export interface Statistic {
 // Blog Post Interface
 export interface BlogPost {
   title: string; // Blog post title
+  seoTitle: string; // Search result and browser title
   excerpt: string; // Short summary of the post
+  metaDescription: string; // Search result description
   category: string; // Post category
-  date: string; // Date of publication
+  date: string; // Human-readable publication date
+  datePublished: string; // ISO publication date
+  dateModified: string; // ISO last-modified date
+  author: string; // Article author or editorial team
+  readTime: string; // Estimated reading time
   imageUrl: string; // Path to the blog image
+  imageAlt: string; // Descriptive alternative text
   slug: string; // Unique identifier for the blog post URL
+  keywords: string[]; // Primary topical phrases
+  keyTakeaways: string[]; // Answer-first summary points
+  faqs: BlogFaq[]; // Visible questions and answers
+  sources: BlogSource[]; // Authoritative references
   content: string; // Full content of the blog post
+}
+
+export interface BlogFaq {
+  question: string;
+  answer: string;
+}
+
+export interface BlogSource {
+  label: string;
+  url: string;
 }
 
 // Job Interface
