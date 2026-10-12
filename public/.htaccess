@@ -7,6 +7,12 @@
   RewriteCond %{HTTP_HOST} ^www\.sns\.com\.sa$ [NC]
   RewriteRule ^ https://sns.com.sa%{REQUEST_URI} [R=301,L,NE]
 
+  RewriteCond %{HTTP_HOST} ^sns\.com\.sa$ [NC]
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !^https$ [NC]
+  RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/ [NC]
+  RewriteRule ^ https://sns.com.sa%{REQUEST_URI} [R=301,L,NE]
+
   # Serve crawler-ready Blog HTML without changing the public canonical URLs.
   RewriteRule ^blog/?$ /prerender/blog.html [L]
   RewriteCond %{DOCUMENT_ROOT}/prerender/blog/$1.html -f
