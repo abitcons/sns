@@ -6,7 +6,7 @@ import { transformWithEsbuild } from 'vite';
 const scriptDirectory = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(scriptDirectory, '..');
 const outputRoot = path.join(projectRoot, 'dist');
-const siteUrl = 'https://nationalsol.sa';
+const siteUrl = 'https://sns.com.sa';
 
 const blogDataSource = await readFile(path.join(projectRoot, 'src', 'data', 'blog.ts'), 'utf8');
 const transformedBlogData = await transformWithEsbuild(blogDataSource, 'blog.ts', {

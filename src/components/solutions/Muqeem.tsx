@@ -26,14 +26,14 @@ export default function SNAMMuqeem() {
           name="keywords"
           content="SNAM Muqeem, resident management Saudi Arabia, SAP integration, Iqama management, Saudi resident documentation, compliance automation"
         />
-        <link rel="canonical" href="https://www.nationalsol.com/solutions/muqeem" />
+        <link rel="canonical" href="https://sns.com.sa/solutions/muqeem" />
         <meta property="og:title" content="SNAM Muqeem - Advanced Resident Management System in Saudi Arabia" />
         <meta
           property="og:description"
           content="Transform resident management with automated documentation, real-time compliance monitoring, and seamless SAP integration."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.nationalsol.com/solutions/muqeem" />
+        <meta property="og:url" content="https://sns.com.sa/solutions/muqeem" />
         <meta property="og:image" content="/images/snam-muqeem-hero.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>

@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://nationalsol.sa/sitemap.xml
+Sitemap: https://sns.com.sa/sitemap.xml

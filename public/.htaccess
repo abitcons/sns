@@ -2,9 +2,10 @@
   RewriteEngine On
   RewriteBase /
 
-  # Consolidate search authority on the canonical apex domain.
-  RewriteCond %{HTTP_HOST} ^www\.nationalsol\.sa$ [NC]
-  RewriteRule ^ https://nationalsol.sa%{REQUEST_URI} [R=301,L,NE]
+  # Preserve each path while consolidating legacy and www hosts on sns.com.sa.
+  RewriteCond %{HTTP_HOST} ^(?:www\.)?nationalsol\.(?:com|sa)$ [NC,OR]
+  RewriteCond %{HTTP_HOST} ^www\.sns\.com\.sa$ [NC]
+  RewriteRule ^ https://sns.com.sa%{REQUEST_URI} [R=301,L,NE]
 
   # Serve crawler-ready Blog HTML without changing the public canonical URLs.
   RewriteRule ^blog/?$ /prerender/blog.html [L]

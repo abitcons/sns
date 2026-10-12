@@ -23,7 +23,7 @@ export default function Solutions() {
       <Helmet>
         <title>Our Solutions - Smart National Solutions</title>
         <meta name="description" content="Explore SNAM solutions suite, including SNAM Travel, SNAM Muqeem, SNAM Yaqeen, innovative AI solutions, and SAP tools to streamline your business operations."/>
-        <link rel="canonical" href="https://www.nationalsol.com/solutions"/>
+        <link rel="canonical" href="https://sns.com.sa/solutions"/>
       </Helmet>
 
    {/* Hero Section */}

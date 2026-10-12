@@ -24,14 +24,14 @@ export default function SuccessFactors() {
           name="keywords"
           content="SAP SuccessFactors, HR solutions, cloud HCM, talent management, employee engagement, Saudi Arabia, Middle East"
         />
-        <link rel="canonical" href="https://www.nationalsol.com/solutions/hr/" />
+        <link rel="canonical" href="https://sns.com.sa/solutions/hr/" />
         <meta property="og:title" content="SAP SuccessFactors - Premier HR Management Solutions in Saudi Arabia and Middle East" />
         <meta
           property="og:description"
           content="Discover SAP SuccessFactors for optimized HR operations, tailored for businesses in Saudi Arabia and the Middle East."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.nationalsol.com/solutions/hr/" />
+        <meta property="og:url" content="https://sns.com.sa/solutions/hr/" />
         <meta property="og:image" content="/images/sap-successfactors-banner.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>

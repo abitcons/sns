@@ -8,11 +8,11 @@ export default function SAPAriba() {
         <title>SAP Ariba - Streamline Procurement Processes</title>
         <meta name="description" content="Explore SAP Ariba, the ultimate solution for managing procurement and supply chain operations, designed for businesses in Saudi Arabia and the Middle East."/>
         <meta name="keywords" content="SAP Ariba, Procurement Management, Supply Chain Optimization, Saudi Arabia, Middle East, SAP Solutions"/>
-        <link rel="canonical" href="https://www.nationalsol.com/solutions/ariba"/>
+        <link rel="canonical" href="https://sns.com.sa/solutions/ariba"/>
         <meta property="og:title" content="SAP Ariba - Streamline Procurement Processes"/>
         <meta property="og:description" content="SAP Ariba empowers businesses in Saudi Arabia and the Middle East to enhance procurement efficiency, reduce costs, and build resilient supply chains."/>
         <meta property="og:type" content="website"/>
-        <meta property="og:url" content="https://www.nationalsol.com/solutions/ariba"/>
+        <meta property="og:url" content="https://sns.com.sa/solutions/ariba"/>
         <meta property="og:image" content="/images/sap-ariba-banner.jpg"/>
         <meta name="twitter:card" content="summary_large_image"/>
       </Helmet>

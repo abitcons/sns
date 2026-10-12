@@ -3,7 +3,7 @@ test development of sns
 
 ## Google Analytics
 
-The site defaults to the dedicated GA4 web stream for `nationalsol.sa`: `G-HXQX92DZ7W`.
+The site defaults to the dedicated GA4 web stream for `sns.com.sa`: `G-HXQX92DZ7W`.
 Set `VITE_GA_MEASUREMENT_ID` before building only if you need to override it:
 
 ```bash

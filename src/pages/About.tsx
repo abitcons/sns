@@ -29,14 +29,14 @@ const About = () => {
           name="keywords"
           content="Smart National Solutions, SAP Gold Partner, Saudi Vision 2030, digital transformation, SAP solutions, Riyadh technology company, innovation in KSA"
         />
-        <link rel="canonical" href="https://www.nationalsol.com/about" />
+        <link rel="canonical" href="https://sns.com.sa/about" />
         <meta property="og:title" content="About Us - Smart National Solutions | Digital Transformation in Saudi Arabia" />
         <meta
           property="og:description"
           content="Learn about Smart National Solutions, our mission, values, and achievements. Discover how we empower businesses in Saudi Arabia with innovative solutions aligned with Vision 2030."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.nationalsol.com/about" />
+        <meta property="og:url" content="https://sns.com.sa/about" />
         <meta property="og:image" content="/images/about-sns-og.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="About Us - Smart National Solutions" />
@@ -55,11 +55,11 @@ const About = () => {
           name: "About Us",
           description:
             "Discover how Smart National Solutions leads digital transformation in Saudi Arabia with tailored SAP solutions, innovation, and contributions to Vision 2030.",
-          url: "https://www.nationalsol.com/about",
+          url: "https://sns.com.sa/about",
           publisher: {
             "@type": "Organization",
             name: "Smart National Solutions",
-            logo: "https://www.nationalsol.com/logo.png",
+            logo: "https://sns.com.sa/logo.png",
           },
         })}
       </script>

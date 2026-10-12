@@ -5,12 +5,12 @@ const TermsAndConditions = () => {
     {
       title: "Introduction",
       icon: <CheckCircle size={20} className="text-[#36a0d0] mr-2" />,
-      content: `Welcome to Smart National Solutions! These Terms and Conditions govern your use of our website www.nationalsol.com and our services. By accessing our website and using our services, you consent to comply with these terms and conditions. If you disagree with any part of the terms, please do not use our website.`,
+      content: `Welcome to Smart National Solutions! These Terms and Conditions govern your use of our website sns.com.sa and our services. By accessing our website and using our services, you consent to comply with these terms and conditions. If you disagree with any part of the terms, please do not use our website.`,
     },
     {
       title: "Intellectual Property Rights",
       icon: <ShieldCheck size={20} className="text-[#36a0d0] mr-2" />,
-      content: `Smart National Solutions and/or its licensors own the intellectual property rights for all material on www.nationalsol.com. All such rights are reserved. You may access this material from www.nationalsol.com for your own personal use subject to restrictions set in these terms and conditions.`,
+      content: `Smart National Solutions and/or its licensors own the intellectual property rights for all material on sns.com.sa. All such rights are reserved. You may access this material from sns.com.sa for your own personal use subject to restrictions set in these terms and conditions.`,
     },
     {
       title: "Use of the Website",

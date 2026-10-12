@@ -16,14 +16,14 @@ export default function AIPoweredRecruitment() {
           name="keywords"
           content="AI Recruitment, Talent Acquisition, AI HR Solutions, Saudi Arabia, Middle East, Smart Hiring, SAP Gold Partner"
         />
-        <link rel="canonical" href="https://www.nationalsol.com/solutions/ai-recruitment" />
+        <link rel="canonical" href="https://sns.com.sa/solutions/ai-recruitment" />
         <meta property="og:title" content="AI-Powered Recruitment - Transform Your Hiring Process" />
         <meta
           property="og:description"
           content="Revolutionize your hiring process with AI-powered recruitment solutions, designed to attract, evaluate, and onboard top talent effectively."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.nationalsol.com/solutions/ai-recruitment" />
+        <meta property="og:url" content="https://sns.com.sa/solutions/ai-recruitment" />
         <meta property="og:image" content="/images/ai-recruitment-banner.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
@@ -208,7 +208,7 @@ export default function AIPoweredRecruitment() {
             transition={{ duration: 0.2 }}
           >
             <a
-              href="https://www.nationalsol.com/contact"
+              href="https://sns.com.sa/contact"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#36a0d0] via-[#5bb6bb] to-[#6ec6ab] text-white rounded-lg font-semibold hover:bg-opacity-90 transition-colors"

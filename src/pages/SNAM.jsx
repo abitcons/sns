@@ -45,11 +45,11 @@ const SNAM = () => {
         <title>SNAM Solutions - Revolutionize Your Business Operations</title>
         <meta name="description" content="Explore SNAM solutions—SNAM AI, SNAM Travel, SNAM Muqeem, and SNAM Yaqeen—integrated with SAP® SuccessFactors® to transform operations, ensure compliance, and boost productivity."/>
         <meta name="keywords" content="SNAM solutions, SAP SuccessFactors integration, HR management, business travel, AI, compliance"/>
-        <link rel="canonical" href="https://www.nationalsol.com/solutions/hr/snam/"/>
+        <link rel="canonical" href="https://sns.com.sa/solutions/hr/snam/"/>
         <meta property="og:title" content="SNAM Solutions - Revolutionize Your Business Operations"/>
         <meta property="og:description" content="Explore SNAM solutions—SNAM AI, SNAM Travel, SNAM Muqeem, and SNAM Yaqeen—integrated with SAP® SuccessFactors® to transform operations, ensure compliance, and boost productivity."/>
         <meta property="og:type" content="website"/>
-        <meta property="og:url" content="https://www.nationalsol.com/solutions/hr/snam/"/>
+        <meta property="og:url" content="https://sns.com.sa/solutions/hr/snam/"/>
         <meta property="og:image" content="/images/snam-solutions-banner.jpg"/>
         <meta name="twitter:card" content="summary_large_image"/>
       </Helmet>

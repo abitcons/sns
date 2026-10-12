@@ -8,11 +8,11 @@ export default function AIPoweredRecruitment() {
         <title>AI-Powered Recruitment - Transform Your Hiring Process</title>
         <meta name="description" content="Leverage AI-powered recruitment to streamline hiring, enhance decision-making, and attract top talent. Tailored for businesses in Saudi Arabia and the Middle East."/>
         <meta name="keywords" content="AI Recruitment, Talent Acquisition, AI HR Solutions, Saudi Arabia, Middle East, Smart Hiring, SAP Gold Partner"/>
-        <link rel="canonical" href="https://www.nationalsol.com/solutions/ai-recruitment"/>
+        <link rel="canonical" href="https://sns.com.sa/solutions/ai-recruitment"/>
         <meta property="og:title" content="AI-Powered Recruitment - Transform Your Hiring Process"/>
         <meta property="og:description" content="Revolutionize your hiring process with AI-powered recruitment solutions, designed to attract, evaluate, and onboard top talent effectively."/>
         <meta property="og:type" content="website"/>
-        <meta property="og:url" content="https://www.nationalsol.com/solutions/ai-recruitment"/>
+        <meta property="og:url" content="https://sns.com.sa/solutions/ai-recruitment"/>
         <meta property="og:image" content="/images/ai-recruitment-banner.jpg"/>
         <meta name="twitter:card" content="summary_large_image"/>
       </Helmet>
@@ -147,7 +147,7 @@ export default function AIPoweredRecruitment() {
             Join leading organizations in Saudi Arabia who trust SNS for their AI-powered recruitment solutions.
           </p>
           <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.2 }}>
-            <a href="https://www.nationalsol.com/contact" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#36a0d0] via-[#5bb6bb] to-[#6ec6ab] text-white rounded-lg font-semibold hover:bg-opacity-90 transition-colors">
+            <a href="https://sns.com.sa/contact" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#36a0d0] via-[#5bb6bb] to-[#6ec6ab] text-white rounded-lg font-semibold hover:bg-opacity-90 transition-colors">
               Schedule a Consultation
               <ArrowRight className="ml-2 h-5 w-5"/>
             </a>

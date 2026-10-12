@@ -8,11 +8,11 @@ export default function SAPAnalyticsCloud() {
         <title>SAP Analytics Cloud - Unlock Data-Driven Insights</title>
         <meta name="description" content="Discover SAP Analytics Cloud, the ultimate solution for data visualization, planning, and predictive analytics, tailored for businesses in Saudi Arabia and the Middle East."/>
         <meta name="keywords" content="SAP Analytics Cloud, Data Visualization, Predictive Analytics, Saudi Arabia, Middle East, SAP Solutions"/>
-        <link rel="canonical" href="https://www.nationalsol.com/solutions/analytics-cloud"/>
+        <link rel="canonical" href="https://sns.com.sa/solutions/analytics-cloud"/>
         <meta property="og:title" content="SAP Analytics Cloud - Unlock Data-Driven Insights"/>
         <meta property="og:description" content="SAP Analytics Cloud empowers businesses in Saudi Arabia and the Middle East to make data-driven decisions with powerful analytics and predictive insights."/>
         <meta property="og:type" content="website"/>
-        <meta property="og:url" content="https://www.nationalsol.com/solutions/analytics-cloud"/>
+        <meta property="og:url" content="https://sns.com.sa/solutions/analytics-cloud"/>
         <meta property="og:image" content="/images/sap-analytics-cloud-banner.jpg"/>
         <meta name="twitter:card" content="summary_large_image"/>
       </Helmet>

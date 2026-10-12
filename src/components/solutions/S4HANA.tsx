@@ -18,7 +18,7 @@ export default function S4HANA() {
           name="keywords"
           content="SAP S/4HANA Saudi Arabia, ERP Implementation, SAP ERP, Industries ERP Solutions, Digital Transformation, SAP Fiori®, Real-Time Analytics, Middle East SAP Solutions"
         />
-        <link rel="canonical" href="https://www.nationalsol.com/solutions/sap-s4hana" />
+        <link rel="canonical" href="https://sns.com.sa/solutions/sap-s4hana" />
       </Helmet>
 
       {/* Hero Section */}

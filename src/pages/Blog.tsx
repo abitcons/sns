@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { blogPosts } from "../data/blog";
 import { fadeIn, staggerContainer } from "../styles/animations";
 
-const siteUrl = "https://nationalsol.sa";
+const siteUrl = "https://sns.com.sa";
 
 export default function Blog() {
   const featuredPost = blogPosts[0];

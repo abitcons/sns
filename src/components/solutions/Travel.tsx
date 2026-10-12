@@ -24,14 +24,14 @@ export default function SNAMTravel() {
           name="keywords"
           content="SNAM Travel, corporate travel management, SAP integration, expense tracking, business travel automation, travel management solutions"
         />
-        <link rel="canonical" href="https://www.nationalsol.com/solutions/travel" />
+        <link rel="canonical" href="https://sns.com.sa/solutions/travel" />
         <meta property="og:title" content="SNAM Travel - Revolutionizing Corporate Travel Management" />
         <meta
           property="og:description"
           content="Discover SNAM Travel: Automate travel requests, manage expenses in real-time, and optimize costs with SAP integration."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.nationalsol.com/solutions/travel" />
+        <meta property="og:url" content="https://sns.com.sa/solutions/travel" />
         <meta property="og:image" content="/images/snam-travel-hero.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>

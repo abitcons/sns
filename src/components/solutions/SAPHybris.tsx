@@ -17,14 +17,14 @@ export default function SAPHybris() {
           name="keywords"
           content="SAP Hybris, Customer Engagement, Omnichannel Commerce, Saudi Arabia, Middle East, SAP Solutions"
         />
-        <link rel="canonical" href="https://www.nationalsol.com/solutions/hybris" />
+        <link rel="canonical" href="https://sns.com.sa/solutions/hybris" />
         <meta property="og:title" content="SAP Hybris - Revolutionize Customer Engagement" />
         <meta
           property="og:description"
           content="SAP Hybris offers businesses in Saudi Arabia and the Middle East the tools to enhance customer experiences and drive sales through innovative technology."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.nationalsol.com/solutions/hybris" />
+        <meta property="og:url" content="https://sns.com.sa/solutions/hybris" />
         <meta property="og:image" content="/images/sap-hybris-banner.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>

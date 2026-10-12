@@ -18,14 +18,14 @@ export default function AIDrivenAnalytics() {
           name="keywords"
           content="AI Analytics, Data-Driven Insights, Predictive Analytics, Saudi Arabia, Middle East, Business Intelligence, SAP Gold Partner"
         />
-        <link rel="canonical" href="https://www.nationalsol.com/solutions/ai-analytics" />
+        <link rel="canonical" href="https://sns.com.sa/solutions/ai-analytics" />
         <meta property="og:title" content="AI-Driven Analytics - Transform Data into Insights" />
         <meta
           property="og:description"
           content="Discover how AI-driven analytics can transform your business by delivering actionable insights through advanced data processing and predictive models."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.nationalsol.com/solutions/ai-analytics" />
+        <meta property="og:url" content="https://sns.com.sa/solutions/ai-analytics" />
         <meta property="og:image" content="/images/ai-analytics-banner.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
@@ -211,7 +211,7 @@ export default function AIDrivenAnalytics() {
       transition={{ duration: 0.2 }}
     >
       <a
-        href="https://www.nationalsol.com/contact"
+        href="https://sns.com.sa/contact"
         target="_blank"
         rel="noopener noreferrer"
         className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#36a0d0] via-[#5bb6bb] to-[#6ec6ab] text-white rounded-lg font-semibold hover:bg-opacity-90 transition-colors"

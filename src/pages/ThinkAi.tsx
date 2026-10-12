@@ -279,7 +279,7 @@ const SmartNationalSolutions = () => {
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <a 
-                  href="https://nationalsol.sa"
+                  href="https://sns.com.sa"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#36a0d0] rounded-full font-semibold text-lg hover:bg-opacity-90 transition-all"

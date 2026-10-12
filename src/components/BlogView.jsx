@@ -11,7 +11,7 @@ import {
 import { Link, useParams } from "react-router-dom";
 import { blogPosts } from "../data/blog";
 
-const siteUrl = "https://nationalsol.sa";
+const siteUrl = "https://sns.com.sa";
 
 export default function BlogPostView() {
   const { slug } = useParams();

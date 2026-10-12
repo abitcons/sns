@@ -166,7 +166,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         label: 'SNS SAP implementation services',
-        url: 'https://nationalsol.sa/services/sap-implementation'
+        url: 'https://sns.com.sa/services/sap-implementation'
       }
     ],
     content: `

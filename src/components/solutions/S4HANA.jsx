@@ -10,7 +10,7 @@ export default function S4HANA() {
         <title>SAP S/4HANA® Implementation & Consulting Services in Saudi Arabia | Smart National Solutions</title>
         <meta name="description" content="Transform your business with SAP S/4HANA® – the intelligent ERP solution tailored for industries in Saudi Arabia. Explore seamless implementation, real-time analytics, and innovative features with Smart National Solutions."/>
         <meta name="keywords" content="SAP S/4HANA Saudi Arabia, ERP Implementation, SAP ERP, Industries ERP Solutions, Digital Transformation, SAP Fiori®, Real-Time Analytics, Middle East SAP Solutions"/>
-        <link rel="canonical" href="https://www.nationalsol.com/solutions/sap-s4hana"/>
+        <link rel="canonical" href="https://sns.com.sa/solutions/sap-s4hana"/>
       </Helmet>
 
       {/* Hero Section */}

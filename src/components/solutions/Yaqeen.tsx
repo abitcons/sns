@@ -26,14 +26,14 @@ export default function SNAMYaqeen() {
           name="keywords"
           content="SNAM Yaqeen, employee verification, HR compliance, data validation, SAP integration, secure employee management, Muqeem integration"
         />
-        <link rel="canonical" href="https://www.nationalsol.com/solutions/yaqeen" />
+        <link rel="canonical" href="https://sns.com.sa/solutions/yaqeen" />
         <meta property="og:title" content="SNAM Yaqeen - Advanced Employee Verification Solution" />
         <meta
           property="og:description"
           content="Transform HR operations with automated verification, real-time compliance monitoring, and seamless SAP integration."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.nationalsol.com/solutions/yaqeen" />
+        <meta property="og:url" content="https://sns.com.sa/solutions/yaqeen" />
         <meta property="og:image" content="/images/snam-yaqeen-hero.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>

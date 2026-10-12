@@ -4,7 +4,7 @@ const PrivacyPolicy = () => {
         {
             title: "Introduction",
             icon: <ShieldCheck size={20} className="text-[#36a0d0] mr-2"/>,
-            content: `At Smart National Solutions, accessible from www.nationalsol.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Smart National Solutions and how we use it.`,
+            content: `At Smart National Solutions, accessible from sns.com.sa, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Smart National Solutions and how we use it.`,
         },
         {
             title: "Legal Basis for Collecting Information",

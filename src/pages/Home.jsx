@@ -27,11 +27,11 @@ export default function Home() {
         <title>{t('seo.title')}</title> {/* Translated title */}
         <meta name="description" content={t('seo.description')} /> {/* Translated description */}
         <meta name="keywords" content={t('seo.keywords')} />
-        <link rel="canonical" href="https://www.nationalsol.com/" />
+        <link rel="canonical" href="https://sns.com.sa/" />
         <meta property="og:title" content={t('seo.ogTitle')} />
         <meta property="og:description" content={t('seo.ogDescription')} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.nationalsol.com/" />
+        <meta property="og:url" content="https://sns.com.sa/" />
         <meta property="og:image" content="/images/og-homepage.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>

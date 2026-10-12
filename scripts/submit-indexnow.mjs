@@ -1,5 +1,5 @@
 const key = '10b4101cfb8a70ec27f079544ca4f50119721e99';
-const host = 'nationalsol.sa';
+const host = 'sns.com.sa';
 const siteUrl = `https://${host}`;
 const urlList = [
   `${siteUrl}/blog`,
